@@ -91,28 +91,28 @@ begin
 end process;
  LED_activating_counter <= refresh_counter(20 downto 19);
 -- 4-to-1 MUX to generate anode activating signals for 4 LEDs 
-process(LED_activating_counter)
+process(LED_activating_counter,display_number)
 begin
     case LED_activating_counter is
     when "00" =>
         Anode_Activate <= "0111"; 
         -- activate LED1 and Deactivate LED2, LED3, LED4
-        LED_BCD <= displayed_number(15 downto 12);
+        LED_BCD <= display_number(15 downto 12);
         -- the first hex digit of the 16-bit number
     when "01" =>
         Anode_Activate <= "1011"; 
         -- activate LED2 and Deactivate LED1, LED3, LED4
-        LED_BCD <= displayed_number(11 downto 8);
+        LED_BCD <= display_number(11 downto 8);
         -- the second hex digit of the 16-bit number
     when "10" =>
         Anode_Activate <= "1101"; 
         -- activate LED3 and Deactivate LED2, LED1, LED4
-        LED_BCD <= displayed_number(7 downto 4);
+        LED_BCD <= display_number(7 downto 4);
         -- the third hex digit of the 16-bit number
     when "11" =>
         Anode_Activate <= "1110"; 
         -- activate LED4 and Deactivate LED2, LED3, LED1
-        LED_BCD <= displayed_number(3 downto 0);
+        LED_BCD <= display_number(3 downto 0);
         -- the fourth hex digit of the 16-bit number    
     end case;
 end process;
