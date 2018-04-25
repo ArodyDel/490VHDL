@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Bluetooth.srcs/sources_1/new/bluetooth.v" \
+"../../../../Bluetooth.srcs/sources_1/new/UART_TX.vhd" \
+
+# Do not sort compile order
+nosort

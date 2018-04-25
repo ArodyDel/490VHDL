@@ -1,0 +1,13 @@
+0.6
+2017.4
+Jan 30 2018
+15:48:17
+C:/Users/arody/Documents/GitHub/490VHDL/490/Bluetooth/Bluetooth.ip_user_files/bd/design_1/ip/design_1_PmodBT2_0_1/src/PmodBT2_axi_gpio_0_0/sim/PmodBT2_axi_gpio_0_0.vhd,1522465001,vhdl,,,,pmodbt2_axi_gpio_0_0,,,,,,,,
+C:/Users/arody/Documents/GitHub/490VHDL/490/Bluetooth/Bluetooth.ip_user_files/bd/design_1/ip/design_1_PmodBT2_0_1/src/PmodBT2_axi_uart16550_0_0/sim/PmodBT2_axi_uart16550_0_0.vhd,1522465001,vhdl,,,,pmodbt2_axi_uart16550_0_0,,,,,,,,
+C:/Users/arody/Documents/GitHub/490VHDL/490/Bluetooth/Bluetooth.ip_user_files/bd/design_1/ip/design_1_PmodBT2_0_1/src/PmodBT2_pmod_bridge_0_0/sim/PmodBT2_pmod_bridge_0_0.v,1522465001,verilog,,,,PmodBT2_pmod_bridge_0_0,,,,,,,,
+C:/Users/arody/Documents/GitHub/490VHDL/490/Bluetooth/Bluetooth.ip_user_files/bd/design_1/sim/design_1.vhd,1522465000,vhdl,,,,design_1,,,,,,,,
+C:/Users/arody/Documents/GitHub/490VHDL/490/Bluetooth/Bluetooth.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,glbl,,,,,,,,
+C:/Users/arody/Documents/GitHub/490VHDL/490/Bluetooth/Bluetooth.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd,1522465000,vhdl,,,,design_1_wrapper,,,,,,,,
+C:/Users/arody/Documents/GitHub/490VHDL/490/Bluetooth/Bluetooth.srcs/sources_1/bd/design_1/ip/design_1_PmodBT2_0_1/src/PmodBT2_pmod_bridge_0_0/src/pmod_concat.v,1522465001,verilog,,C:/Users/arody/Documents/GitHub/490VHDL/490/Bluetooth/Bluetooth.ip_user_files/bd/design_1/ip/design_1_PmodBT2_0_1/src/PmodBT2_pmod_bridge_0_0/sim/PmodBT2_pmod_bridge_0_0.v,,pmod_concat,,,,,,,,
+C:/Users/arody/Documents/GitHub/490VHDL/490/Bluetooth/Bluetooth.srcs/sources_1/new/UART_TX.vhd,1518995012,vhdl,,,,uart_tb,,,,,,,,
+C:/Users/arody/Documents/GitHub/490VHDL/490/Bluetooth/Bluetooth.srcs/sources_1/new/bluetooth.v,1518993243,vhdl,,,,uart_rx,,,,,,,,

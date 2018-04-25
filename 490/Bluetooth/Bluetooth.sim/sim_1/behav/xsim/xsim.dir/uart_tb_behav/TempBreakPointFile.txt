@@ -1,0 +1,2 @@
+Breakpoint File Version 1.0
+104 true C:/Users/arody/Documents/GitHub/490VHDL/490/Bluetooth/Bluetooth.srcs/sources_1/new/UART_TX.vhd

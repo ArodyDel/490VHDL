@@ -1,0 +1,5 @@
+Vivado Simulator 2017.4
+Time resolution is 1 ps
+Failure: Failed to open input.txt
+Time: 0 ps  Iteration: 0  Process: /tb_uart/stim_parser  File: C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sim_1/new/uart_tb.vhd
+$finish called at time : 0 fs : File "C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sim_1/new/uart_tb.vhd" Line 137

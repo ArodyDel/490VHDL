@@ -1,0 +1,2 @@
+Breakpoint File Version 1.0
+129 true C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sim_1/new/UART_TBB.vhd

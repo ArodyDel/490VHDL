@@ -1,0 +1,47 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.6.11  2017-06-12 bk=1.3860 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port s_axi_aclk_0 -pg 1 -y 480 -defaultsOSRD
+preplace port AXI_LITE_UART_awvalid_0 -pg 1 -y 220 -defaultsOSRD
+preplace port s_axi_aresetn_0 -pg 1 -y 500 -defaultsOSRD
+preplace port AXI_LITE_UART_wready_0 -pg 1 -y 400 -defaultsOSRD
+preplace port AXI_LITE_UART_bready_0 -pg 1 -y 240 -defaultsOSRD
+preplace port AXI_LITE_UART_wvalid_0 -pg 1 -y 440 -defaultsOSRD
+preplace port AXI_LITE_UART_rready_0 -pg 1 -y 320 -defaultsOSRD
+preplace port AXI_LITE_UART_rvalid_0 -pg 1 -y 360 -defaultsOSRD
+preplace port AXI_LITE_UART_arvalid_0 -pg 1 -y 160 -defaultsOSRD
+preplace port AXI_LITE_UART_bvalid_0 -pg 1 -y 280 -defaultsOSRD
+preplace port AXI_LITE_UART_awready_0 -pg 1 -y 200 -defaultsOSRD
+preplace port AXI_LITE_UART_arready_0 -pg 1 -y 140 -defaultsOSRD
+preplace portBus AXI_LITE_UART_rdata_0 -pg 1 -y 300 -defaultsOSRD
+preplace portBus AXI_LITE_UART_rresp_0 -pg 1 -y 340 -defaultsOSRD
+preplace portBus AXI_LITE_UART_bresp_0 -pg 1 -y 260 -defaultsOSRD
+preplace portBus AXI_LITE_UART_awaddr_0 -pg 1 -y 180 -defaultsOSRD
+preplace portBus AXI_LITE_UART_wstrb_0 -pg 1 -y 420 -defaultsOSRD
+preplace portBus AXI_LITE_UART_wdata_0 -pg 1 -y 380 -defaultsOSRD
+preplace portBus AXI_LITE_UART_araddr_0 -pg 1 -y 120 -defaultsOSRD
+preplace inst PmodBT2_0 -pg 1 -lvl 1 -y 300 -defaultsOSRD
+preplace netloc AXI_LITE_UART_awvalid_0_1 1 0 1 NJ
+preplace netloc s_axi_aclk_0_1 1 0 1 N
+preplace netloc PmodBT2_0_AXI_LITE_UART_rdata 1 0 2 -790 40 -360J
+preplace netloc AXI_LITE_UART_wdata_0_1 1 0 1 NJ
+preplace netloc AXI_LITE_UART_rready_0_1 1 0 1 NJ
+preplace netloc PmodBT2_0_AXI_LITE_UART_wready 1 0 2 -750 550 -340J
+preplace netloc AXI_LITE_UART_wvalid_0_1 1 0 1 NJ
+preplace netloc PmodBT2_0_AXI_LITE_UART_bvalid 1 0 2 -750 50 -370J
+preplace netloc AXI_LITE_UART_arvalid_0_1 1 0 1 NJ
+preplace netloc PmodBT2_0_AXI_LITE_UART_awready 1 0 2 -770 20 -320J
+preplace netloc AXI_LITE_UART_awaddr_0_1 1 0 1 NJ
+preplace netloc AXI_LITE_UART_wstrb_0_1 1 0 1 NJ
+preplace netloc s_axi_aresetn_0_1 1 0 1 N
+preplace netloc PmodBT2_0_AXI_LITE_UART_arready 1 0 2 -780 10 -310J
+preplace netloc AXI_LITE_UART_bready_0_1 1 0 1 NJ
+preplace netloc PmodBT2_0_AXI_LITE_UART_bresp 1 0 2 -760 30 -350J
+preplace netloc PmodBT2_0_AXI_LITE_UART_rresp 1 0 2 -800 -10 -340J
+preplace netloc AXI_LITE_UART_araddr_0_1 1 0 1 NJ
+preplace netloc PmodBT2_0_AXI_LITE_UART_rvalid 1 0 2 -810 -30 -330J
+levelinfo -pg 1 -830 -560 -120 -top -220 -bot 1010
+",
+}
+

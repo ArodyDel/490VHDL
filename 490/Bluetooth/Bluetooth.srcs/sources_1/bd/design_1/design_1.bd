@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:BoundaryCRC="0x7B86F885A8F353A2" bd:device="xc7a35tcpg236-1" bd:isValidated="true" bd:synthFlowMode="Hierarchical" bd:tool_version="2017.4.1" bd:top="design_1" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>design_1</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:busInterfaces>
+      <spirit:busInterface>
+        <spirit:name>CLK.S_AXI_ACLK_0</spirit:name>
+        <spirit:displayName>Clk</spirit:displayName>
+        <spirit:description>Clock</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>CLK</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>s_axi_aclk_0</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>100000000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.000</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>CLK_DOMAIN</spirit:name>
+            <spirit:value>design_1_s_axi_aclk_0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>ASSOCIATED_RESET</spirit:name>
+            <spirit:value>s_axi_aresetn_0</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>RST.S_AXI_ARESETN_0</spirit:name>
+        <spirit:displayName>Reset</spirit:displayName>
+        <spirit:description>Reset</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>RST</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>s_axi_aresetn_0</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>POLARITY</spirit:name>
+            <spirit:value>ACTIVE_LOW</spirit:value>
+            <spirit:vendorExtensions>
+              <bd:configElementInfos>
+                <bd:configElementInfo bd:valueSource="default"/>
+              </bd:configElementInfos>
+            </spirit:vendorExtensions>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+    </spirit:busInterfaces>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="design_1_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+        <spirit:port>
+          <spirit:name>AXI_LITE_UART_rvalid_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AXI_LITE_UART_bresp_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>1</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AXI_LITE_UART_bready_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AXI_LITE_UART_arready_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AXI_LITE_UART_rdata_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>31</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AXI_LITE_UART_araddr_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>12</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AXI_LITE_UART_bvalid_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AXI_LITE_UART_wstrb_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AXI_LITE_UART_awaddr_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>12</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AXI_LITE_UART_wready_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AXI_LITE_UART_rresp_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>1</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AXI_LITE_UART_arvalid_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AXI_LITE_UART_rready_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AXI_LITE_UART_awvalid_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AXI_LITE_UART_wvalid_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AXI_LITE_UART_wdata_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>31</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>AXI_LITE_UART_awready_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>s_axi_aclk_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>s_axi_aresetn_0</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+      </spirit:ports>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>design_1_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>PmodBT2_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="IP" spirit:name="PmodBT2" spirit:vendor="digilentinc.com" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_PmodBT2_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="PMOD">ja</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>PmodBT2_0_AXI_LITE_UART_rvalid</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="AXI_LITE_UART_rvalid"/>
+        <spirit:externalPortReference spirit:portRef="AXI_LITE_UART_rvalid_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>PmodBT2_0_AXI_LITE_UART_bresp</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="AXI_LITE_UART_bresp"/>
+        <spirit:externalPortReference spirit:portRef="AXI_LITE_UART_bresp_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>AXI_LITE_UART_bready_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="AXI_LITE_UART_bready_0"/>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="AXI_LITE_UART_bready"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>PmodBT2_0_AXI_LITE_UART_arready</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="AXI_LITE_UART_arready"/>
+        <spirit:externalPortReference spirit:portRef="AXI_LITE_UART_arready_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>PmodBT2_0_AXI_LITE_UART_rdata</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="AXI_LITE_UART_rdata"/>
+        <spirit:externalPortReference spirit:portRef="AXI_LITE_UART_rdata_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>AXI_LITE_UART_araddr_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="AXI_LITE_UART_araddr_0"/>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="AXI_LITE_UART_araddr"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>PmodBT2_0_AXI_LITE_UART_bvalid</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="AXI_LITE_UART_bvalid"/>
+        <spirit:externalPortReference spirit:portRef="AXI_LITE_UART_bvalid_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>AXI_LITE_UART_wstrb_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="AXI_LITE_UART_wstrb_0"/>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="AXI_LITE_UART_wstrb"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>AXI_LITE_UART_awaddr_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="AXI_LITE_UART_awaddr_0"/>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="AXI_LITE_UART_awaddr"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>PmodBT2_0_AXI_LITE_UART_wready</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="AXI_LITE_UART_wready"/>
+        <spirit:externalPortReference spirit:portRef="AXI_LITE_UART_wready_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>PmodBT2_0_AXI_LITE_UART_rresp</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="AXI_LITE_UART_rresp"/>
+        <spirit:externalPortReference spirit:portRef="AXI_LITE_UART_rresp_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>AXI_LITE_UART_arvalid_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="AXI_LITE_UART_arvalid_0"/>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="AXI_LITE_UART_arvalid"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>AXI_LITE_UART_rready_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="AXI_LITE_UART_rready_0"/>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="AXI_LITE_UART_rready"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>AXI_LITE_UART_awvalid_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="AXI_LITE_UART_awvalid_0"/>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="AXI_LITE_UART_awvalid"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>AXI_LITE_UART_wvalid_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="AXI_LITE_UART_wvalid_0"/>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="AXI_LITE_UART_wvalid"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>AXI_LITE_UART_wdata_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="AXI_LITE_UART_wdata_0"/>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="AXI_LITE_UART_wdata"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>PmodBT2_0_AXI_LITE_UART_awready</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="AXI_LITE_UART_awready"/>
+        <spirit:externalPortReference spirit:portRef="AXI_LITE_UART_awready_0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>s_axi_aclk_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="s_axi_aclk_0"/>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="s_axi_aclk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>s_axi_aresetn_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="s_axi_aresetn_0"/>
+        <spirit:internalPortReference spirit:componentRef="PmodBT2_0" spirit:portRef="s_axi_aresetn"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+  </spirit:design>
+
+</bd:repository>

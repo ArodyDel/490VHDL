@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar 30 22:56:41 2018" VIVADOVERSION="2017.4.1">
+
+  <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:basys3:part0:1.1" DEVICE="7a35t" NAME="design_1" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" NAME="AXI_LITE_UART_rvalid_0" SIGIS="undef" SIGNAME="PmodBT2_0_AXI_LITE_UART_rvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="AXI_LITE_UART_rvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1" NAME="AXI_LITE_UART_bresp_0" RIGHT="0" SIGIS="undef" SIGNAME="PmodBT2_0_AXI_LITE_UART_bresp">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="AXI_LITE_UART_bresp"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="AXI_LITE_UART_bready_0" SIGIS="undef" SIGNAME="External_Ports_AXI_LITE_UART_bready_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="AXI_LITE_UART_bready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="AXI_LITE_UART_arready_0" SIGIS="undef" SIGNAME="PmodBT2_0_AXI_LITE_UART_arready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="AXI_LITE_UART_arready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="AXI_LITE_UART_rdata_0" RIGHT="0" SIGIS="undef" SIGNAME="PmodBT2_0_AXI_LITE_UART_rdata">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="AXI_LITE_UART_rdata"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="12" NAME="AXI_LITE_UART_araddr_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_AXI_LITE_UART_araddr_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="AXI_LITE_UART_araddr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="AXI_LITE_UART_bvalid_0" SIGIS="undef" SIGNAME="PmodBT2_0_AXI_LITE_UART_bvalid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="AXI_LITE_UART_bvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="AXI_LITE_UART_wstrb_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_AXI_LITE_UART_wstrb_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="AXI_LITE_UART_wstrb"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="12" NAME="AXI_LITE_UART_awaddr_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_AXI_LITE_UART_awaddr_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="AXI_LITE_UART_awaddr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="AXI_LITE_UART_wready_0" SIGIS="undef" SIGNAME="PmodBT2_0_AXI_LITE_UART_wready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="AXI_LITE_UART_wready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="1" NAME="AXI_LITE_UART_rresp_0" RIGHT="0" SIGIS="undef" SIGNAME="PmodBT2_0_AXI_LITE_UART_rresp">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="AXI_LITE_UART_rresp"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="AXI_LITE_UART_arvalid_0" SIGIS="undef" SIGNAME="External_Ports_AXI_LITE_UART_arvalid_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="AXI_LITE_UART_arvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="AXI_LITE_UART_rready_0" SIGIS="undef" SIGNAME="External_Ports_AXI_LITE_UART_rready_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="AXI_LITE_UART_rready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="AXI_LITE_UART_awvalid_0" SIGIS="undef" SIGNAME="External_Ports_AXI_LITE_UART_awvalid_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="AXI_LITE_UART_awvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="AXI_LITE_UART_wvalid_0" SIGIS="undef" SIGNAME="External_Ports_AXI_LITE_UART_wvalid_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="AXI_LITE_UART_wvalid"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="AXI_LITE_UART_wdata_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_AXI_LITE_UART_wdata_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="AXI_LITE_UART_wdata"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="AXI_LITE_UART_awready_0" SIGIS="undef" SIGNAME="PmodBT2_0_AXI_LITE_UART_awready">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="AXI_LITE_UART_awready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk_0" SIGIS="clk" SIGNAME="External_Ports_s_axi_aclk_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="s_axi_aclk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="s_axi_aresetn_0" SIGIS="rst" SIGNAME="External_Ports_s_axi_aresetn_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PmodBT2_0" PORT="s_axi_aresetn"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/PmodBT2_0" HWVERSION="1.0" INSTANCE="PmodBT2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PmodBT2" VLNV="digilentinc.com:IP:PmodBT2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_PmodBT2_0_1"/>
+        <PARAMETER NAME="USE_BOARD_FLOW" VALUE="false"/>
+        <PARAMETER NAME="PMOD" VALUE="ja"/>
+        <PARAMETER NAME="AXI_LITE_GPIO_BASEADDR" VALUE="0xFFFFFFFF"/>
+        <PARAMETER NAME="AXI_LITE_GPIO_HIGHADDR" VALUE="0x00000000"/>
+        <PARAMETER NAME="AXI_LITE_UART_BASEADDR" VALUE="0xFFFFFFFF"/>
+        <PARAMETER NAME="AXI_LITE_UART_HIGHADDR" VALUE="0x00000000"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="8" NAME="AXI_LITE_GPIO_araddr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="AXI_LITE_GPIO_arready" SIGIS="undef"/>
+        <PORT DIR="I" NAME="AXI_LITE_GPIO_arvalid" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="8" NAME="AXI_LITE_GPIO_awaddr" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="AXI_LITE_GPIO_awready" SIGIS="undef"/>
+        <PORT DIR="I" NAME="AXI_LITE_GPIO_awvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="AXI_LITE_GPIO_bready" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="AXI_LITE_GPIO_bresp" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="AXI_LITE_GPIO_bvalid" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="AXI_LITE_GPIO_rdata" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="AXI_LITE_GPIO_rready" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="1" NAME="AXI_LITE_GPIO_rresp" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="AXI_LITE_GPIO_rvalid" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="AXI_LITE_GPIO_wdata" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="AXI_LITE_GPIO_wready" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="AXI_LITE_GPIO_wstrb" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="AXI_LITE_GPIO_wvalid" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="12" NAME="AXI_LITE_UART_araddr" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_AXI_LITE_UART_araddr_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AXI_LITE_UART_araddr_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_UART_arready" SIGIS="undef" SIGNAME="PmodBT2_0_AXI_LITE_UART_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AXI_LITE_UART_arready_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_UART_arvalid" SIGIS="undef" SIGNAME="External_Ports_AXI_LITE_UART_arvalid_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AXI_LITE_UART_arvalid_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="12" NAME="AXI_LITE_UART_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_AXI_LITE_UART_awaddr_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AXI_LITE_UART_awaddr_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_UART_awready" SIGIS="undef" SIGNAME="PmodBT2_0_AXI_LITE_UART_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AXI_LITE_UART_awready_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_UART_awvalid" SIGIS="undef" SIGNAME="External_Ports_AXI_LITE_UART_awvalid_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AXI_LITE_UART_awvalid_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_UART_bready" SIGIS="undef" SIGNAME="External_Ports_AXI_LITE_UART_bready_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AXI_LITE_UART_bready_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="AXI_LITE_UART_bresp" RIGHT="0" SIGIS="undef" SIGNAME="PmodBT2_0_AXI_LITE_UART_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AXI_LITE_UART_bresp_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_UART_bvalid" SIGIS="undef" SIGNAME="PmodBT2_0_AXI_LITE_UART_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AXI_LITE_UART_bvalid_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="AXI_LITE_UART_rdata" RIGHT="0" SIGIS="undef" SIGNAME="PmodBT2_0_AXI_LITE_UART_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AXI_LITE_UART_rdata_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_UART_rready" SIGIS="undef" SIGNAME="External_Ports_AXI_LITE_UART_rready_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AXI_LITE_UART_rready_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="AXI_LITE_UART_rresp" RIGHT="0" SIGIS="undef" SIGNAME="PmodBT2_0_AXI_LITE_UART_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AXI_LITE_UART_rresp_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_UART_rvalid" SIGIS="undef" SIGNAME="PmodBT2_0_AXI_LITE_UART_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AXI_LITE_UART_rvalid_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="AXI_LITE_UART_wdata" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_AXI_LITE_UART_wdata_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AXI_LITE_UART_wdata_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="AXI_LITE_UART_wready" SIGIS="undef" SIGNAME="PmodBT2_0_AXI_LITE_UART_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AXI_LITE_UART_wready_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="AXI_LITE_UART_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_AXI_LITE_UART_wstrb_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AXI_LITE_UART_wstrb_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="AXI_LITE_UART_wvalid" SIGIS="undef" SIGNAME="External_Ports_AXI_LITE_UART_wvalid_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="AXI_LITE_UART_wvalid_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="Pmod_out_pin10_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin10_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin10_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin1_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin1_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin1_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin2_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin2_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin2_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin3_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin3_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin3_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin4_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin4_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin4_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin7_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin7_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin7_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin8_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin8_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin8_t" SIGIS="undef"/>
+        <PORT DIR="I" NAME="Pmod_out_pin9_i" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin9_o" SIGIS="undef"/>
+        <PORT DIR="O" NAME="Pmod_out_pin9_t" SIGIS="undef"/>
+        <PORT DIR="O" NAME="BT2_uart_interrupt" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="s_axi_aclk" SIGIS="clk" SIGNAME="External_Ports_s_axi_aclk_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="s_axi_aclk_0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axi_aresetn" SIGIS="rst" SIGNAME="External_Ports_s_axi_aresetn_0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="s_axi_aresetn_0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="Pmod_out" TYPE="INITIATOR" VLNV="digilentinc.com:interface:pmod:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="PIN1_O" PHYSICAL="Pmod_out_pin1_o"/>
+            <PORTMAP LOGICAL="PIN7_I" PHYSICAL="Pmod_out_pin7_i"/>
+            <PORTMAP LOGICAL="PIN2_O" PHYSICAL="Pmod_out_pin2_o"/>
+            <PORTMAP LOGICAL="PIN8_I" PHYSICAL="Pmod_out_pin8_i"/>
+            <PORTMAP LOGICAL="PIN3_O" PHYSICAL="Pmod_out_pin3_o"/>
+            <PORTMAP LOGICAL="PIN9_I" PHYSICAL="Pmod_out_pin9_i"/>
+            <PORTMAP LOGICAL="PIN10_O" PHYSICAL="Pmod_out_pin10_o"/>
+            <PORTMAP LOGICAL="PIN4_O" PHYSICAL="Pmod_out_pin4_o"/>
+            <PORTMAP LOGICAL="PIN3_I" PHYSICAL="Pmod_out_pin3_i"/>
+            <PORTMAP LOGICAL="PIN4_I" PHYSICAL="Pmod_out_pin4_i"/>
+            <PORTMAP LOGICAL="PIN1_I" PHYSICAL="Pmod_out_pin1_i"/>
+            <PORTMAP LOGICAL="PIN2_I" PHYSICAL="Pmod_out_pin2_i"/>
+            <PORTMAP LOGICAL="PIN10_T" PHYSICAL="Pmod_out_pin10_t"/>
+            <PORTMAP LOGICAL="PIN8_T" PHYSICAL="Pmod_out_pin8_t"/>
+            <PORTMAP LOGICAL="PIN9_T" PHYSICAL="Pmod_out_pin9_t"/>
+            <PORTMAP LOGICAL="PIN4_T" PHYSICAL="Pmod_out_pin4_t"/>
+            <PORTMAP LOGICAL="PIN9_O" PHYSICAL="Pmod_out_pin9_o"/>
+            <PORTMAP LOGICAL="PIN10_I" PHYSICAL="Pmod_out_pin10_i"/>
+            <PORTMAP LOGICAL="PIN7_T" PHYSICAL="Pmod_out_pin7_t"/>
+            <PORTMAP LOGICAL="PIN1_T" PHYSICAL="Pmod_out_pin1_t"/>
+            <PORTMAP LOGICAL="PIN2_T" PHYSICAL="Pmod_out_pin2_t"/>
+            <PORTMAP LOGICAL="PIN7_O" PHYSICAL="Pmod_out_pin7_o"/>
+            <PORTMAP LOGICAL="PIN3_T" PHYSICAL="Pmod_out_pin3_t"/>
+            <PORTMAP LOGICAL="PIN8_O" PHYSICAL="Pmod_out_pin8_o"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" DATAWIDTH="32" NAME="AXI_LITE_UART" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="13"/>
+          <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PARAMETER NAME="HAS_BURST" VALUE="0"/>
+          <PARAMETER NAME="HAS_LOCK" VALUE="0"/>
+          <PARAMETER NAME="HAS_PROT" VALUE="0"/>
+          <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
+          <PARAMETER NAME="HAS_QOS" VALUE="0"/>
+          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_s_axi_aclk_0"/>
+          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="AXI_LITE_UART_araddr"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="AXI_LITE_UART_arready"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="AXI_LITE_UART_arvalid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="AXI_LITE_UART_awaddr"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="AXI_LITE_UART_awready"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="AXI_LITE_UART_awvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="AXI_LITE_UART_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="AXI_LITE_UART_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="AXI_LITE_UART_bvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="AXI_LITE_UART_rdata"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="AXI_LITE_UART_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="AXI_LITE_UART_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="AXI_LITE_UART_rvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="AXI_LITE_UART_wdata"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="AXI_LITE_UART_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="AXI_LITE_UART_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="AXI_LITE_UART_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" DATAWIDTH="32" NAME="AXI_LITE_GPIO" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
+          <PARAMETER NAME="DATA_WIDTH" VALUE="32"/>
+          <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ADDR_WIDTH" VALUE="9"/>
+          <PARAMETER NAME="AWUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="WUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="RUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="BUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="READ_WRITE_MODE" VALUE="READ_WRITE"/>
+          <PARAMETER NAME="HAS_BURST" VALUE="0"/>
+          <PARAMETER NAME="HAS_LOCK" VALUE="0"/>
+          <PARAMETER NAME="HAS_PROT" VALUE="0"/>
+          <PARAMETER NAME="HAS_CACHE" VALUE="0"/>
+          <PARAMETER NAME="HAS_QOS" VALUE="0"/>
+          <PARAMETER NAME="HAS_REGION" VALUE="0"/>
+          <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_BRESP" VALUE="1"/>
+          <PARAMETER NAME="HAS_RRESP" VALUE="1"/>
+          <PARAMETER NAME="SUPPORTS_NARROW_BURST" VALUE="0"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="1"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="100000000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="design_1_s_axi_aclk_0"/>
+          <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
+          <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
+          <PARAMETER NAME="RUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="AXI_LITE_GPIO_araddr"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="AXI_LITE_GPIO_arready"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="AXI_LITE_GPIO_arvalid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="AXI_LITE_GPIO_awaddr"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="AXI_LITE_GPIO_awready"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="AXI_LITE_GPIO_awvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="AXI_LITE_GPIO_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="AXI_LITE_GPIO_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="AXI_LITE_GPIO_bvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="AXI_LITE_GPIO_rdata"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="AXI_LITE_GPIO_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="AXI_LITE_GPIO_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="AXI_LITE_GPIO_rvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="AXI_LITE_GPIO_wdata"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="AXI_LITE_GPIO_wready"/>
+            <PORTMAP LOGICAL="WSTRB" PHYSICAL="AXI_LITE_GPIO_wstrb"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="AXI_LITE_GPIO_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>
