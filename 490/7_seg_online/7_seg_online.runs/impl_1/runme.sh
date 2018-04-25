@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/arody/Documents/GitHub/490VHDL/490/7_seg_online/7_seg_online.runs/impl_1'
+HD_PWD='C:/Users/arody/Documents/490/7_seg_online/7_seg_online.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

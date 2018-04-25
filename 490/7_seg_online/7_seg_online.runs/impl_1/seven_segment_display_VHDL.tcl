@@ -65,8 +65,9 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_param xicom.use_bs_reader 1
   open_checkpoint seven_segment_display_VHDL_routed.dcp
-  set_property webtalk.parent_dir C:/Users/arody/Documents/GitHub/490VHDL/490/7_seg_online/7_seg_online.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/arody/Documents/490/7_seg_online/7_seg_online.cache/wt [current_project]
   catch { write_mem_info -force seven_segment_display_VHDL.mmi }
   write_bitstream -force seven_segment_display_VHDL.bit 
   catch {write_debug_probes -quiet -force seven_segment_display_VHDL}

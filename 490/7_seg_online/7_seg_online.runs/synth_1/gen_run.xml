@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1518915485">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1520466573">
   <File Type="PA-TCL" Name="seven_segment_display_VHDL.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="seven_segment_display_VHDL_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="seven_segment_display_VHDL_reports.tcl"/>

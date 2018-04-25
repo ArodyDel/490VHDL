@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2017.4.1 (64-bit)              -->
+<!-- Product Version: Vivado v2017.4 (64-bit)              -->
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="35" Path="C:/Users/arody/Documents/GitHub/490VHDL/490/7_seg_online/7_seg_online.xpr">
+<Project Version="7" Minor="35" Path="C:/Users/arody/Documents/490/7_seg_online/7_seg_online.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="320440e8192c4f708dafdc6b212744ac"/>
