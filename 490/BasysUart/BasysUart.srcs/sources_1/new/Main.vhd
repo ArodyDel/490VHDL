@@ -73,7 +73,9 @@ end component UART_TX;
       i_Clk       : in  std_logic;
       i_Rx_Serial : in  std_logic;
       o_Rx_dv     : out std_logic;
-      o_Rx_Byte   : out std_logic_vector(7 downto 0)
+      o_Rx_Byte   : out std_logic_vector(7 downto 0);
+      o_buff      : out std_logic_vector(31 downto 0);
+      o_ledBuff  :  out std_logic_vector(31 downto 0)
       );
   end component uart_rx;
 
@@ -87,12 +89,11 @@ end component UART_TX;
   signal w_TX_DONE   : std_logic;
   signal w_RX_DV     : std_logic;
   signal w_RX_BYTE   : std_logic_vector(7 downto 0);
-  signal state       : std_logic_vector(1 downto 0):="00";
-  signal buff: std_logic_vector(31 downto 0); 
-  signal ledBuff:std_logic_vector(31 downto 0);
   
-    attribute dont_touch : string;
-    attribute dont_touch of state : signal is "true";
+  signal Mbuff: std_logic_vector(31 downto 0); 
+  signal MledBuff:std_logic_vector(31 downto 0);
+  
+    
 
 begin
 
@@ -117,23 +118,13 @@ begin
           i_clk       => r_CLOCK,
           i_rx_serial => r_RX_SERIAL,
           o_rx_dv     => w_RX_DV,
-          o_rx_byte   => w_RX_BYTE
+          o_rx_byte   => w_RX_BYTE,
+          o_buff=>Mbuff,
+          o_ledbuff=>MledBuff
           );
-process(buff)
-begin 
-        ledBuff(31 downto 24)<=buff(31 downto 24)-subASCII(7 downto 0);
-        ledBuff(23 downto 16)<=buff(23 downto 16)-subASCII(7 downto 0);
-        ledBuff(15 downto 8)<=buff(15 downto 8)-subASCII(7 downto 0);
-        ledBuff(7 downto 0)<=buff(7 downto 0)-subASCII(7 downto 0);
-        
-        led(15 downto 12)<= ledBuff(27 downto 24);
-        led(11 downto 8)<= ledBuff(19 downto 16);
-        led(7 downto 4)<= ledBuff(11 downto 8);
-        led(3 downto 0)<= ledBuff(3 downto 0);
 
-        end process;
           
-process(r_CLOCK,w_TX_DONE,r_TX_DV,r_RX_SERIAL,state)
+process(r_CLOCK,w_TX_DONE,r_TX_DV,r_RX_SERIAL)
      begin
      
         -- Tell the UART to send a command.
@@ -143,38 +134,19 @@ process(r_CLOCK,w_TX_DONE,r_TX_DV,r_RX_SERIAL,state)
             if(rising_edge(r_CLOCK) and r_TX_DV='0') then
                 r_TX_DV   <= '1';
                 r_TX_BYTE <= X"68";
-                
-            
             end if;    
        end if;
        
-       
-       Case state is 
-       when "00"=>
-       buff(31 downto 24)<=w_RX_BYTE;
-        if(falling_edge (r_RX_SERIAL)) then
-            state<="01";
-        end if;
-       
-       when "01"=>
-       buff(23 downto 16)<=w_RX_BYTE;
-        if(falling_edge (r_RX_SERIAL)) then
-            state<="10";
-       end if;
-       
-       when "10"=>
-              buff(15 downto 8)<=w_RX_BYTE;
-               if(falling_edge (r_RX_SERIAL)) then
-                   state<="11";
-              end if;
-       
-       when "11"=>
-                     buff(7 downto 0)<=w_RX_BYTE;
-                      if(falling_edge (r_RX_SERIAL)) then
-                          state<="00";
-                     end if;
+       led(15 downto 12)<=MledBuff(27 downto 24);
+       led(11 downto 8)<=MledBuff(19 downto 16);
+       led(7 downto 4)<=MledBuff(11 downto 8);
+       led(3 downto 0)<=MledBuff(3 downto 0);
+
+
         
-        end case;      
+       
+       
+             
         
         end process;
 

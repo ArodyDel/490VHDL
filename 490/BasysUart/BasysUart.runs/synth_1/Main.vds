@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed Apr 25 19:45:22 2018
-# Process ID: 4848
+# Start of session at: Thu Apr 26 17:46:57 2018
+# Process ID: 9616
 # Current directory: C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.runs/synth_1
 # Command line: vivado.exe -log Main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Main.tcl
 # Log file: C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.runs/synth_1/Main.vds
@@ -15,29 +15,26 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1248 
+INFO: Helper process launched with PID 8572 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 358.102 ; gain = 99.887
+Starting RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 358.371 ; gain = 100.020
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'Main' [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/Main.vhd:51]
-INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/Main.vhd:90]
 	Parameter g_CLKS_PER_BIT bound to: 10416 - type: integer 
-INFO: [Synth 8-3491] module 'UART_TX' declared at 'C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_TX.vhd:19' bound to instance 'UART_TX_INST' of component 'UART_TX' [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/Main.vhd:99]
+INFO: [Synth 8-3491] module 'UART_TX' declared at 'C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_TX.vhd:19' bound to instance 'UART_TX_INST' of component 'UART_TX' [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/Main.vhd:100]
 INFO: [Synth 8-638] synthesizing module 'UART_TX' [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_TX.vhd:37]
 	Parameter g_CLKS_PER_BIT bound to: 10416 - type: integer 
 INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_TX.vhd:28]
 INFO: [Synth 8-256] done synthesizing module 'UART_TX' (1#1) [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_TX.vhd:37]
 	Parameter g_CLKS_PER_BIT bound to: 10416 - type: integer 
-INFO: [Synth 8-3491] module 'UART_RX' declared at 'C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_RX.vhd:18' bound to instance 'UART_RX_INST' of component 'uart_rx' [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/Main.vhd:112]
-INFO: [Synth 8-638] synthesizing module 'UART_RX' [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_RX.vhd:31]
+INFO: [Synth 8-3491] module 'UART_RX' declared at 'C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_RX.vhd:20' bound to instance 'UART_RX_INST' of component 'uart_rx' [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/Main.vhd:113]
+INFO: [Synth 8-638] synthesizing module 'UART_RX' [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_RX.vhd:37]
 	Parameter g_CLKS_PER_BIT bound to: 10416 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'UART_RX' (2#1) [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_RX.vhd:31]
-WARNING: [Synth 8-614] signal 'subASCII' is read in the process but is not in the sensitivity list [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/Main.vhd:122]
-WARNING: [Synth 8-614] signal 'ledBuff' is read in the process but is not in the sensitivity list [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/Main.vhd:122]
-WARNING: [Synth 8-614] signal 'w_RX_BYTE' is read in the process but is not in the sensitivity list [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/Main.vhd:136]
+INFO: [Synth 8-256] done synthesizing module 'UART_RX' (2#1) [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_RX.vhd:37]
+WARNING: [Synth 8-614] signal 'MledBuff' is read in the process but is not in the sensitivity list [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/Main.vhd:127]
 INFO: [Synth 8-256] done synthesizing module 'Main' (3#1) [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/Main.vhd:51]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 410.234 ; gain = 152.020
+Finished RTL Elaboration : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 410.672 ; gain = 152.320
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -47,7 +44,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 410.234 ; gain = 152.020
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 410.672 ; gain = 152.320
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -63,22 +60,22 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 746.270 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 745.418 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:18 ; elapsed = 00:01:24 . Memory (MB): peak = 746.270 ; gain = 488.055
+Finished Constraint Validation : Time (s): cpu = 00:01:06 ; elapsed = 00:01:09 . Memory (MB): peak = 745.418 ; gain = 487.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:18 ; elapsed = 00:01:24 . Memory (MB): peak = 746.270 ; gain = 488.055
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:06 ; elapsed = 00:01:10 . Memory (MB): peak = 745.418 ; gain = 487.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:19 ; elapsed = 00:01:24 . Memory (MB): peak = 746.270 ; gain = 488.055
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:06 ; elapsed = 00:01:10 . Memory (MB): peak = 745.418 ; gain = 487.066
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'r_SM_Main_reg' in module 'UART_TX'
 INFO: [Synth 8-5544] ROM "o_TX_Active" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -110,9 +107,8 @@ INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encod
                s_cleanup |                              100 |                              100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encoding 'sequential' in module 'UART_RX'
-WARNING: [Synth 8-327] inferring latch for variable 'buff_reg' [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/Main.vhd:154]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:20 ; elapsed = 00:01:25 . Memory (MB): peak = 746.270 ; gain = 488.055
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:07 ; elapsed = 00:01:10 . Memory (MB): peak = 745.418 ; gain = 487.066
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -126,15 +122,19 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     14 Bit       Adders := 2     
-	   2 Input      8 Bit       Adders := 3     
+	   2 Input      8 Bit       Adders := 4     
 	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
+	               32 Bit    Registers := 2     
 	               14 Bit    Registers := 2     
 	                8 Bit    Registers := 3     
 	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 7     
 +---Muxes : 
-	   4 Input     32 Bit        Muxes := 2     
+	   4 Input     32 Bit        Muxes := 1     
+	   5 Input     32 Bit        Muxes := 1     
 	   2 Input     14 Bit        Muxes := 2     
 	   5 Input     14 Bit        Muxes := 2     
 	   2 Input      8 Bit        Muxes := 1     
@@ -143,8 +143,7 @@ Detailed RTL Component Info :
 	   5 Input      3 Bit        Muxes := 2     
 	  11 Input      3 Bit        Muxes := 1     
 	  12 Input      3 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 2     
-	   5 Input      1 Bit        Muxes := 12    
+	   5 Input      1 Bit        Muxes := 13    
 	   2 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -155,14 +154,9 @@ Start RTL Hierarchical Component Statistics
 Hierarchical RTL Component report 
 Module Main 
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      8 Bit       Adders := 3     
 +---Registers : 
 	                8 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
-+---Muxes : 
-	   4 Input     32 Bit        Muxes := 2     
-	   4 Input      2 Bit        Muxes := 2     
 Module UART_TX 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -184,13 +178,19 @@ Module UART_RX
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     14 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 4     
 	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
+	               32 Bit    Registers := 2     
 	               14 Bit    Registers := 1     
 	                8 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 3     
 +---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+	   5 Input     32 Bit        Muxes := 1     
 	   2 Input     14 Bit        Muxes := 1     
 	   5 Input     14 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 1     
@@ -199,7 +199,7 @@ Detailed RTL Component Info :
 	   5 Input      3 Bit        Muxes := 1     
 	  12 Input      3 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
-	   5 Input      1 Bit        Muxes := 4     
+	   5 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -215,16 +215,13 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element UART_RX_INST/r_RX_DV_reg was removed.  [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_RX.vhd:68]
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\state_reg[0]__0 )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\state_reg[0]__2 )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\state_reg[1]__2 )
-INFO: [Synth 8-3886] merging instance 'r_TX_BYTE_reg[7]' (FDRE) to 'r_TX_BYTE_reg[0]'
-INFO: [Synth 8-3886] merging instance 'r_TX_BYTE_reg[6]' (FDSE) to 'r_TX_DV_reg'
-INFO: [Synth 8-3886] merging instance 'r_TX_BYTE_reg[5]' (FDSE) to 'r_TX_DV_reg'
-INFO: [Synth 8-3886] merging instance 'r_TX_BYTE_reg[4]' (FDRE) to 'r_TX_BYTE_reg[0]'
+WARNING: [Synth 8-6014] Unused sequential element UART_RX_INST/r_RX_DV_reg was removed.  [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_RX.vhd:80]
+INFO: [Synth 8-3886] merging instance 'r_TX_BYTE_reg[7]' (FDRE) to 'r_TX_BYTE_reg[4]'
+INFO: [Synth 8-3886] merging instance 'r_TX_BYTE_reg[6]' (FDSE) to 'r_TX_BYTE_reg[5]'
+INFO: [Synth 8-3886] merging instance 'r_TX_BYTE_reg[5]' (FDSE) to 'r_TX_BYTE_reg[3]'
+INFO: [Synth 8-3886] merging instance 'r_TX_BYTE_reg[4]' (FDRE) to 'r_TX_BYTE_reg[2]'
 INFO: [Synth 8-3886] merging instance 'r_TX_BYTE_reg[3]' (FDSE) to 'r_TX_DV_reg'
-INFO: [Synth 8-3886] merging instance 'r_TX_BYTE_reg[2]' (FDRE) to 'r_TX_BYTE_reg[0]'
+INFO: [Synth 8-3886] merging instance 'r_TX_BYTE_reg[2]' (FDRE) to 'r_TX_BYTE_reg[1]'
 INFO: [Synth 8-3886] merging instance 'r_TX_BYTE_reg[1]' (FDRE) to 'r_TX_BYTE_reg[0]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\r_TX_BYTE_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (r_TX_DV_reg)
@@ -240,46 +237,47 @@ WARNING: [Synth 8-3332] Sequential element (UART_TX_INST/r_TX_Done_reg) is unuse
 CRITICAL WARNING: [Synth 8-3352] multi-driven net o_TX_Done with 1st driver pin 'UART_TX_INST/r_TX_Done_reg/Q' [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_TX.vhd:62]
 CRITICAL WARNING: [Synth 8-3352] multi-driven net o_TX_Done with 2nd driver pin 'VCC' [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_TX.vhd:62]
 CRITICAL WARNING: [Synth 8-5559] multi-driven net o_TX_Done is connected to constant driver, other driver is ignored [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_TX.vhd:62]
-WARNING: [Synth 8-3332] Sequential element (buff_reg[31]) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (buff_reg[30]) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (buff_reg[29]) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (buff_reg[28]) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (buff_reg[23]) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (buff_reg[22]) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (buff_reg[21]) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (buff_reg[20]) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (buff_reg[15]) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (buff_reg[14]) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (buff_reg[13]) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (buff_reg[12]) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (buff_reg[7]) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (buff_reg[6]) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (buff_reg[5]) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (buff_reg[4]) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (state_reg[0]__0) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (state_reg[1]__2) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (state_reg[0]__2) is unused and will be removed from module Main.
 WARNING: [Synth 8-3332] Sequential element (r_TX_BYTE_reg[0]) is unused and will be removed from module Main.
 WARNING: [Synth 8-3332] Sequential element (UART_TX_INST/r_TX_Data_reg[0]) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (r_TX_DV_reg) is unused and will be removed from module Main.
 WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/r_RX_Byte_reg[7]) is unused and will be removed from module Main.
 WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/r_RX_Byte_reg[6]) is unused and will be removed from module Main.
 WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/r_RX_Byte_reg[5]) is unused and will be removed from module Main.
 WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/r_RX_Byte_reg[4]) is unused and will be removed from module Main.
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\state_reg[0]_P )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\state_reg[1]_C )
-INFO: [Synth 8-3886] merging instance 'buff_reg[0]' (LD) to 'buff_reg[8]'
-INFO: [Synth 8-3886] merging instance 'buff_reg[1]' (LD) to 'buff_reg[9]'
-INFO: [Synth 8-3886] merging instance 'buff_reg[2]' (LD) to 'buff_reg[10]'
-INFO: [Synth 8-3886] merging instance 'buff_reg[3]' (LD) to 'buff_reg[11]'
-INFO: [Synth 8-3886] merging instance 'buff_reg[8]' (LD) to 'buff_reg[16]'
-INFO: [Synth 8-3886] merging instance 'buff_reg[9]' (LD) to 'buff_reg[17]'
-INFO: [Synth 8-3886] merging instance 'buff_reg[10]' (LD) to 'buff_reg[18]'
-INFO: [Synth 8-3886] merging instance 'buff_reg[11]' (LD) to 'buff_reg[19]'
-WARNING: [Synth 8-3332] Sequential element (state_reg[1]_C) is unused and will be removed from module Main.
-WARNING: [Synth 8-3332] Sequential element (state_reg[0]_P) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/buff_reg[31]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/buff_reg[30]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/buff_reg[29]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/buff_reg[28]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/buff_reg[23]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/buff_reg[22]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/buff_reg[21]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/buff_reg[20]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/buff_reg[15]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/buff_reg[14]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/buff_reg[13]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/buff_reg[12]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/buff_reg[7]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/buff_reg[6]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/buff_reg[5]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/buff_reg[4]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/ledBuff_reg[31]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/ledBuff_reg[30]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/ledBuff_reg[29]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/ledBuff_reg[28]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/ledBuff_reg[23]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/ledBuff_reg[22]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/ledBuff_reg[21]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/ledBuff_reg[20]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/ledBuff_reg[15]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/ledBuff_reg[14]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/ledBuff_reg[13]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/ledBuff_reg[12]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/ledBuff_reg[7]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/ledBuff_reg[6]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/ledBuff_reg[5]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (UART_RX_INST/ledBuff_reg[4]) is unused and will be removed from module Main.
+WARNING: [Synth 8-3332] Sequential element (r_TX_DV_reg) is unused and will be removed from module Main.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:24 ; elapsed = 00:01:30 . Memory (MB): peak = 746.270 ; gain = 488.055
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:01:14 . Memory (MB): peak = 745.418 ; gain = 487.066
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -291,13 +289,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:08 ; elapsed = 00:02:15 . Memory (MB): peak = 746.270 ; gain = 488.055
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:55 ; elapsed = 00:01:59 . Memory (MB): peak = 745.418 ; gain = 487.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:09 ; elapsed = 00:02:16 . Memory (MB): peak = 758.965 ; gain = 500.750
+Finished Timing Optimization : Time (s): cpu = 00:01:56 ; elapsed = 00:02:00 . Memory (MB): peak = 759.633 ; gain = 501.281
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -309,7 +307,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:09 ; elapsed = 00:02:16 . Memory (MB): peak = 759.855 ; gain = 501.641
+Finished Technology Mapping : Time (s): cpu = 00:01:56 ; elapsed = 00:02:01 . Memory (MB): peak = 760.863 ; gain = 502.512
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -333,7 +331,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:14 ; elapsed = 00:02:21 . Memory (MB): peak = 759.855 ; gain = 501.641
+Finished IO Insertion : Time (s): cpu = 00:02:00 ; elapsed = 00:02:05 . Memory (MB): peak = 760.863 ; gain = 502.512
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -346,7 +344,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:14 ; elapsed = 00:02:21 . Memory (MB): peak = 759.855 ; gain = 501.641
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:00 ; elapsed = 00:02:05 . Memory (MB): peak = 760.863 ; gain = 502.512
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -358,25 +356,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:14 ; elapsed = 00:02:21 . Memory (MB): peak = 759.855 ; gain = 501.641
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:00 ; elapsed = 00:02:05 . Memory (MB): peak = 760.863 ; gain = 502.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:14 ; elapsed = 00:02:22 . Memory (MB): peak = 759.855 ; gain = 501.641
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:00 ; elapsed = 00:02:05 . Memory (MB): peak = 760.863 ; gain = 502.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:14 ; elapsed = 00:02:22 . Memory (MB): peak = 759.855 ; gain = 501.641
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:00 ; elapsed = 00:02:05 . Memory (MB): peak = 760.863 ; gain = 502.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:14 ; elapsed = 00:02:22 . Memory (MB): peak = 759.855 ; gain = 501.641
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:00 ; elapsed = 00:02:05 . Memory (MB): peak = 760.863 ; gain = 502.512
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -392,52 +390,46 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     2|
+|1     |BUFG   |     1|
 |2     |CARRY4 |     8|
 |3     |LUT1   |     1|
 |4     |LUT2   |     7|
-|5     |LUT3   |    19|
-|6     |LUT4   |    25|
-|7     |LUT5   |     9|
-|8     |LUT6   |    31|
-|9     |FDCE   |     1|
-|10    |FDPE   |     1|
-|11    |FDRE   |    51|
-|12    |LD     |     8|
-|13    |LDC    |     2|
-|14    |IBUF   |     2|
-|15    |OBUF   |    17|
+|5     |LUT3   |     5|
+|6     |LUT4   |    23|
+|7     |LUT5   |    12|
+|8     |LUT6   |    36|
+|9     |FDRE   |    82|
+|10    |IBUF   |     2|
+|11    |OBUF   |    17|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+---------------+--------+------+
 |      |Instance       |Module  |Cells |
 +------+---------------+--------+------+
-|1     |top            |        |   184|
-|2     |  UART_RX_INST |UART_RX |    84|
+|1     |top            |        |   194|
+|2     |  UART_RX_INST |UART_RX |   117|
 |3     |  UART_TX_INST |UART_TX |    57|
 +------+---------------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:14 ; elapsed = 00:02:22 . Memory (MB): peak = 759.855 ; gain = 501.641
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:00 ; elapsed = 00:02:05 . Memory (MB): peak = 760.863 ; gain = 502.512
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 3 critical warnings and 31 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:22 ; elapsed = 00:01:53 . Memory (MB): peak = 759.855 ; gain = 165.605
-Synthesis Optimization Complete : Time (s): cpu = 00:02:15 ; elapsed = 00:02:22 . Memory (MB): peak = 759.855 ; gain = 501.641
+Synthesis finished with 0 errors, 3 critical warnings and 41 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:08 ; elapsed = 00:01:38 . Memory (MB): peak = 760.863 ; gain = 167.766
+Synthesis Optimization Complete : Time (s): cpu = 00:02:01 ; elapsed = 00:02:06 . Memory (MB): peak = 760.863 ; gain = 502.512
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 10 instances were transformed.
-  LD => LDCE: 8 instances
-  LDC => LDCE: 2 instances
+No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-64 Infos, 34 Warnings, 3 Critical Warnings and 0 Errors encountered.
+50 Infos, 42 Warnings, 3 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:20 ; elapsed = 00:02:31 . Memory (MB): peak = 759.855 ; gain = 513.438
+synth_design: Time (s): cpu = 00:02:06 ; elapsed = 00:02:14 . Memory (MB): peak = 760.863 ; gain = 514.309
 INFO: [Common 17-1381] The checkpoint 'C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.runs/synth_1/Main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Main_utilization_synth.rpt -pb Main_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.126 . Memory (MB): peak = 759.855 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 25 19:48:13 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.115 . Memory (MB): peak = 760.863 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 26 17:49:31 2018...
