@@ -75,7 +75,8 @@ end component UART_TX;
       o_Rx_dv     : out std_logic;
       o_Rx_Byte   : out std_logic_vector(7 downto 0);
       o_buff      : out std_logic_vector(31 downto 0);
-      o_ledBuff  :  out std_logic_vector(31 downto 0)
+      o_ledBuff  :  out std_logic_vector(31 downto 0);
+      o_buffDone :out std_logic
       );
   end component uart_rx;
 
@@ -90,10 +91,23 @@ end component UART_TX;
   signal w_RX_DV     : std_logic;
   signal w_RX_BYTE   : std_logic_vector(7 downto 0);
   
+  type MSG is array(0 to 165) of std_logic_vector(7 downto 0);
+  signal fullMSG:MSG:=(X"57", X"65", X"6c", X"63", X"6f", X"6d", X"65", X"20", X"74", X"6f", X"20", X"74", X"68", X"65", X"20", 
+  X"47", X"55", X"45", X"53", X"53", X"49", X"4e", X"47", X"20", X"47", X"41", X"4d", X"45", X"0a", X"50", X"6c", X"65", X"61", 
+  X"73", X"65", X"20", X"65", X"6e", X"74", X"65", X"72", X"20", X"61", X"20", X"6e", X"75", X"6d", X"62", X"65", X"72", X"20", 
+  X"66", X"6f", X"72", X"20", X"79", X"6f", X"75", X"72", X"20", X"6f", X"70", X"70", X"6f", X"6e", X"65", X"6e", X"74", X"20", 
+  X"74", X"6f", X"20", X"67", X"75", X"65", X"73", X"73", X"0a", X"4f", X"4e", X"4c", X"59", X"20", X"50", X"55", X"54", X"20", 
+  X"4e", X"55", X"4d", X"42", X"45", X"52", X"53", X"20", X"46", X"52", X"4f", X"4d", X"20", X"30", X"20", X"54", X"4f", X"20", 
+  X"39", X"39", X"39", X"0a", X"0a", X"57", X"61", X"69", X"74", X"20", X"75", X"6e", X"74", X"69", X"6c", X"20", X"62", X"6f", 
+  X"74", X"68", X"20", X"70", X"6c", X"61", X"79", X"65", X"72", X"73", X"20", X"61", X"72", X"65", X"20", X"72", X"65", X"61", 
+  X"64", X"79", X"2c", X"68", X"69", X"74", X"20", X"73", X"65", X"6e", X"64", X"20", X"61", X"74", X"20", X"73", X"61", X"6d", 
+  X"65", X"20", X"74", X"69", X"6d", X"65", X"0a");
+  signal MSG_Index : integer range 0 to 166 := 0;
   signal Mbuff: std_logic_vector(31 downto 0); 
   signal MledBuff:std_logic_vector(31 downto 0);
-  
-    
+  signal ledB: std_logic_vector(31 downto 0);
+  signal initflag:std_logic:='1';  
+  signal buffdone:std_logic;  
 
 begin
 
@@ -120,27 +134,44 @@ begin
           o_rx_dv     => w_RX_DV,
           o_rx_byte   => w_RX_BYTE,
           o_buff=>Mbuff,
-          o_ledbuff=>MledBuff
+          o_ledbuff=>MledBuff,
+          o_buffDone=>buffdone
           );
 
           
-process(r_CLOCK,w_TX_DONE,r_TX_DV,r_RX_SERIAL)
+process(initFlag,w_TX_DONE,r_TX_DV,r_RX_SERIAL)
      begin
      
         -- Tell the UART to send a command.
 
-        w_TX_DONE<='1';
-        if(w_TX_DONE='0') then 
-            if(rising_edge(r_CLOCK) and r_TX_DV='0') then
+       -- w_TX_DONE<='1';
+        if(w_TX_DONE='0'and r_TX_DV/='1') then 
+            if(initflag='1') then
                 r_TX_DV   <= '1';
-                r_TX_BYTE <= X"68";
-            end if;    
-       end if;
+                r_TX_BYTE <= fullMSG(MSG_Index);
+                --r_TX_DV   <= '0'; 
+                end if;
+            end if;
+            if( w_TX_DONE ='1') then
+                if(MSG_Index=166) then
+                initflag<='0';
+                end if;
+             r_TX_DV   <= '0';
+             MSG_Index<=MSG_Index+1;
+             
+            end if;   
+       --end if;
        
-       led(15 downto 12)<=MledBuff(27 downto 24);
-       led(11 downto 8)<=MledBuff(19 downto 16);
-       led(7 downto 4)<=MledBuff(11 downto 8);
-       led(3 downto 0)<=MledBuff(3 downto 0);
+       
+       
+       ledB(31 downto 24)<=Mbuff(31 downto 24)-subASCII(7 downto 0);
+       ledB(23 downto 16)<=Mbuff(23 downto 16)-subASCII(7 downto 0);
+       ledB(15 downto 8)<=Mbuff(15 downto 8)-subASCII(7 downto 0);
+       ledB(7 downto 0)<=Mbuff(7 downto 0)-subASCII(7 downto 0);
+       led(15 downto 12)<=ledB(27 downto 24);
+       led(11 downto 8)<=ledB(19 downto 16);
+       led(7 downto 4)<=ledB(11 downto 8);
+       led(3 downto 0)<=ledB(3 downto 0);
 
 
         

@@ -1,0 +1,8 @@
+0.6
+2017.4
+Jan 30 2018
+15:48:17
+C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.sim/sim_1/synth/timing/xsim/uart_tb_time_synth.v,1524812625,verilog,,,,Main;UART_RX;UART_TX;glbl,,,,,,,,
+C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sim_1/new/UART_TBB.vhd,1524812604,vhdl,,,,uart_tb,,,,,,,,
+C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_RX.vhd,1524811487,vhdl,,,,uart_rx,,,,,,,,
+C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_TX.vhd,1524620971,vhdl,,,,uart_tx,,,,,,,,

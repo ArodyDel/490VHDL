@@ -27,8 +27,8 @@ entity UART_RX is
     o_RX_DV     : out std_logic;
     o_RX_Byte   : out std_logic_vector(7 downto 0);
     o_buff      : out std_logic_vector(31 downto 0);
-    o_ledBuff  :  out std_logic_vector(31 downto 0)
-
+    o_ledBuff  :  out std_logic_vector(31 downto 0);
+    o_buffDone :out std_logic
     
     );
 end UART_RX;
@@ -49,10 +49,11 @@ architecture rtl of UART_RX is
   signal r_RX_Byte   : std_logic_vector(7 downto 0) := (others => '0');
   signal r_RX_DV     : std_logic := '0';
   
-   signal state       : integer range 0 to 3:=0;
+   signal state       : integer range 0 to 10:=0;
    signal buff: std_logic_vector(31 downto 0); 
    signal ledBuff:std_logic_vector(31 downto 0);
    signal subASCII : std_logic_vector(7 downto 0):="00110000";
+   signal buffDone:std_logic:='0';
 
    
 begin
@@ -79,7 +80,8 @@ begin
         when s_Idle =>
           r_RX_DV     <= '0';
           r_Clk_Count <= 0;
-          r_Bit_Index <= 0;
+          r_Bit_Index <= 0;          
+          
  
           if r_RX_Data = '0' then       -- Start bit detected
             r_SM_Main <= s_RX_Start_Bit;
@@ -119,7 +121,59 @@ begin
             else
               r_Bit_Index <= 0;
               r_SM_Main   <= s_RX_Stop_Bit;
-              state<=state+1;
+           if(r_RX_Byte=X"0A" )then
+                  if(state=0) then
+                  buff(31 downto 24)<=X"00";
+                  ledBuff(31 downto 24)<=buff(23 downto 24);
+                  buff(23 downto 16)<=X"00";
+                  ledBuff(23 downto 16)<=buff(23 downto 16);
+                  buff(15 downto 8)<=X"00";
+                  ledBuff(15 downto 8)<=buff(15 downto 8);
+                  buff(7 downto 0)<=X"00";
+                  ledBuff(7 downto 0)<=buff(7 downto 0);                                
+                 
+                  elsif (state=1) then
+                  buff(23 downto 16)<=X"00";
+                  ledBuff(23 downto 16)<=buff(23 downto 16);
+                  buff(15 downto 8)<=X"00";
+                  ledBuff(15 downto 8)<=buff(15 downto 8);
+                  buff(7 downto 0)<=X"00";
+                  ledBuff(7 downto 0)<=buff(7 downto 0);
+                   
+                   elsif (state=2) then
+                   buff(15 downto 8)<=X"00";
+                   ledBuff(15 downto 8)<=buff(15 downto 8 );
+                  buff(7 downto 0)<=X"00";
+                  ledBuff(7 downto 0)<=buff(7 downto 0);              
+                  
+                  end if;                
+             state<=0;
+             buffDone<='1';
+             end if;
+             if(r_RX_Byte/=X"0A") then
+                  if(state=0) then
+               buff(31 downto 24)<=r_RX_Byte;                                     
+               --ledBuff(31 downto 24)<=X"00";
+               ledBuff(31 downto 24)<=buff(31 downto 24)-subASCII(7 downto 0);
+               buffDone<='0'; 
+               elsif (state=1) then
+               buff(23 downto 16)<=r_RX_Byte;
+               --ledBuff(23 downto 16)<=X"00";
+               ledBuff(23 downto 16)<=buff(23 downto 16)-subASCII(7 downto 0);
+               elsif(state=2) then
+               buff(15 downto 8)<=r_RX_Byte;
+               --ledBuff(15 downto 8)<=X"00";
+               ledBuff(15 downto 8)<=buff(15 downto 8)-subASCII(7 downto 0);
+               elsif (state=3) then
+               buff(7 downto 0)<=r_RX_Byte;
+               --ledBuff(7 downto 0)<=X"00";
+               ledBuff(7 downto 0)<=buff(7 downto 0)-subASCII(7 downto 0);
+   
+               end if;
+               state<=state+1;
+                         
+          end if;
+              
             end if;
           end if;
  
@@ -133,7 +187,9 @@ begin
           else
             r_RX_DV     <= '1';
             r_Clk_Count <= 0;
-            r_SM_Main   <= s_Cleanup;
+            r_SM_Main   <= s_Cleanup;        
+            
+            
           end if;
  
                    
@@ -141,29 +197,12 @@ begin
         when s_Cleanup =>
           r_SM_Main <= s_Idle;
           r_RX_DV   <= '0';
-          if(state=4)then
-          state<=0;
-          end if;
-          Case state is 
-          when 0=>
-          buff(31 downto 24)<=r_RX_Byte;
-          ledBuff(31 downto 24)<=X"00";
-          ledBuff(31 downto 24)<=buff(31 downto 24)-subASCII(7 downto 0);
-          when 1=>
-          buff(23 downto 16)<=r_RX_Byte;
-          ledBuff(23 downto 16)<=X"00";
-          ledBuff(23 downto 16)<=buff(23 downto 16)-subASCII(7 downto 0);
-          when 2=>
-          buff(15 downto 8)<=r_RX_Byte;
-          ledBuff(15 downto 8)<=X"00";
-          ledBuff(15 downto 8)<=buff(15 downto 8)-subASCII(7 downto 0);
-          when 3=>
-          buff(7 downto 0)<=r_RX_Byte;
-          ledBuff(7 downto 0)<=X"00";
-          ledBuff(7 downto 0)<=buff(7 downto 0)-subASCII(7 downto 0);
-          end case;   
+          
+           
+        
         when others =>
           r_SM_Main <= s_Idle;
+          
  
       end case;
     end if;
@@ -172,6 +211,7 @@ begin
   o_RX_DV   <= r_RX_DV;
   o_RX_Byte <= r_RX_Byte;
   o_buff<=buff;
+  o_buffDone<=buffDone;
   o_ledbuff<=ledbuff;
    
 end rtl;

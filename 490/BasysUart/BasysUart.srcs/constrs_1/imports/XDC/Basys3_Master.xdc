@@ -126,11 +126,11 @@ set_property IOSTANDARD LVCMOS33 [get_ports {led[15]}]
 #set_property PACKAGE_PIN J1 [get_ports {JA[0]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {JA[0]}]
 #Sch name = JA2
-set_property PACKAGE_PIN L2 [get_ports {w_TX_SERIAL}]
-set_property IOSTANDARD LVCMOS33 [get_ports {w_TX_SERIAL}]
+set_property PACKAGE_PIN L2 [get_ports w_TX_SERIAL]
+set_property IOSTANDARD LVCMOS33 [get_ports w_TX_SERIAL]
 #Sch name = JA3
-set_property PACKAGE_PIN J2 [get_ports {r_RX_SERIAL}]
-set_property IOSTANDARD LVCMOS33 [get_ports {r_RX_SERIAL}]
+set_property PACKAGE_PIN J2 [get_ports r_RX_SERIAL]
+set_property IOSTANDARD LVCMOS33 [get_ports r_RX_SERIAL]
 ##Sch name = JA4
 #set_property PACKAGE_PIN G2 [get_ports {JA[3]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {JA[3]}]
@@ -291,5 +291,7 @@ set_property IOSTANDARD LVCMOS33 [get_ports {r_RX_SERIAL}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {QspiDB[3]}]
 #set_property PACKAGE_PIN K19 [get_ports QspiCSn]
 #set_property IOSTANDARD LVCMOS33 [get_ports QspiCSn]
+
+
 
 

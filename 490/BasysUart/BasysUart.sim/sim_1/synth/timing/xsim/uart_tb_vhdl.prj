@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../BasysUart.srcs/sources_1/new/UART_RX.vhd" \
+"../../../../../BasysUart.srcs/sources_1/new/UART_TX.vhd" \
+"../../../../../BasysUart.srcs/sim_1/new/UART_TBB.vhd" \
+
+# Do not sort compile order
+nosort

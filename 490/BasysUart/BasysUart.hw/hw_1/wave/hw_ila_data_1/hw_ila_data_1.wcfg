@@ -10,14 +10,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="8451fs"></ZoomEndTime>
+      <ZoomEndTime time="8432fs"></ZoomEndTime>
       <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="175"></NameColumnWidth>
-      <ValueColumnWidth column_width="146"></ValueColumnWidth>
+      <ValueColumnWidth column_width="142"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="158" />
+   <WVObjectSize size="132" />
    <wvobject fp_name="UART_RX_INST/r_Bit_Index" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">UART_RX_INST/r_Bit_Index[2:0]</obj_property>
@@ -30,14 +30,6 @@
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">UART_RX_INST/r_SM_Main[2:0]</obj_property>
       <obj_property name="ObjectShortName">r_SM_Main[2:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="UART_RX_INST/r_RX_Byte" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/r_RX_Byte[7:0]</obj_property>
-      <obj_property name="ObjectShortName">r_RX_Byte[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -68,16 +60,8 @@
    </wvobject>
    <wvobject fp_name="led_OBUF" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">led_OBUF[7:0]</obj_property>
-      <obj_property name="ObjectShortName">led_OBUF[7:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="r_TX_BYTE" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">r_TX_BYTE[3:3]</obj_property>
-      <obj_property name="ObjectShortName">r_TX_BYTE[3:3]</obj_property>
+      <obj_property name="ElementShortName">led_OBUF[15:0]</obj_property>
+      <obj_property name="ObjectShortName">led_OBUF[15:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -198,14 +182,6 @@
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">UART_RX_INST/FSM_sequential_r_SM_Main[1]_i_4_n_0</obj_property>
       <obj_property name="ObjectShortName">FSM_sequential_r_SM_Main[1]_i_4_n_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="UART_RX_INST/FSM_sequential_r_SM_Main[2]_i_1_n_0" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/FSM_sequential_r_SM_Main[2]_i_1_n_0</obj_property>
-      <obj_property name="ObjectShortName">FSM_sequential_r_SM_Main[2]_i_1_n_0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -386,18 +362,10 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="UART_RX_INST/r_Clk_Count" type="logic">
+   <wvobject fp_name="UART_RX_INST/r_Clk_Count" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count</obj_property>
-      <obj_property name="ObjectShortName">r_Clk_Count</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="UART_RX_INST/r_Clk_Count[0]_i_1_n_0" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count[0]_i_1_n_0</obj_property>
-      <obj_property name="ObjectShortName">r_Clk_Count[0]_i_1_n_0</obj_property>
+      <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count[13:0]</obj_property>
+      <obj_property name="ObjectShortName">r_Clk_Count[13:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -426,26 +394,10 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="UART_RX_INST/r_Clk_Count[1]_i_1_n_0" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count[1]_i_1_n_0</obj_property>
-      <obj_property name="ObjectShortName">r_Clk_Count[1]_i_1_n_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
    <wvobject fp_name="UART_TX_INST/r_Clk_Count[1]_i_1_n_0" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">UART_TX_INST/r_Clk_Count[1]_i_1_n_0</obj_property>
       <obj_property name="ObjectShortName">r_Clk_Count[1]_i_1_n_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="UART_RX_INST/r_Clk_Count[2]_i_1_n_0" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count[2]_i_1_n_0</obj_property>
-      <obj_property name="ObjectShortName">r_Clk_Count[2]_i_1_n_0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -458,26 +410,10 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="UART_RX_INST/r_Clk_Count[3]_i_1_n_0" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count[3]_i_1_n_0</obj_property>
-      <obj_property name="ObjectShortName">r_Clk_Count[3]_i_1_n_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
    <wvobject fp_name="UART_TX_INST/r_Clk_Count[3]_i_1_n_0" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">UART_TX_INST/r_Clk_Count[3]_i_1_n_0</obj_property>
       <obj_property name="ObjectShortName">r_Clk_Count[3]_i_1_n_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="UART_RX_INST/r_Clk_Count[4]_i_1_n_0" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count[4]_i_1_n_0</obj_property>
-      <obj_property name="ObjectShortName">r_Clk_Count[4]_i_1_n_0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -490,26 +426,10 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="UART_RX_INST/r_Clk_Count[5]_i_1_n_0" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count[5]_i_1_n_0</obj_property>
-      <obj_property name="ObjectShortName">r_Clk_Count[5]_i_1_n_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
    <wvobject fp_name="UART_TX_INST/r_Clk_Count[5]_i_1_n_0" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">UART_TX_INST/r_Clk_Count[5]_i_1_n_0</obj_property>
       <obj_property name="ObjectShortName">r_Clk_Count[5]_i_1_n_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="UART_RX_INST/r_Clk_Count[6]_i_1_n_0" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count[6]_i_1_n_0</obj_property>
-      <obj_property name="ObjectShortName">r_Clk_Count[6]_i_1_n_0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -522,26 +442,10 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="UART_RX_INST/r_Clk_Count[7]_i_1_n_0" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count[7]_i_1_n_0</obj_property>
-      <obj_property name="ObjectShortName">r_Clk_Count[7]_i_1_n_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
    <wvobject fp_name="UART_TX_INST/r_Clk_Count[7]_i_1_n_0" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">UART_TX_INST/r_Clk_Count[7]_i_1_n_0</obj_property>
       <obj_property name="ObjectShortName">r_Clk_Count[7]_i_1_n_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="UART_RX_INST/r_Clk_Count[8]_i_1_n_0" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count[8]_i_1_n_0</obj_property>
-      <obj_property name="ObjectShortName">r_Clk_Count[8]_i_1_n_0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -554,26 +458,10 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="UART_RX_INST/r_Clk_Count[9]_i_1_n_0" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count[9]_i_1_n_0</obj_property>
-      <obj_property name="ObjectShortName">r_Clk_Count[9]_i_1_n_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
    <wvobject fp_name="UART_TX_INST/r_Clk_Count[9]_i_1_n_0" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">UART_TX_INST/r_Clk_Count[9]_i_1_n_0</obj_property>
       <obj_property name="ObjectShortName">r_Clk_Count[9]_i_1_n_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="UART_RX_INST/r_Clk_Count[10]_i_1_n_0" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count[10]_i_1_n_0</obj_property>
-      <obj_property name="ObjectShortName">r_Clk_Count[10]_i_1_n_0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -586,26 +474,10 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="UART_RX_INST/r_Clk_Count[11]_i_1_n_0" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count[11]_i_1_n_0</obj_property>
-      <obj_property name="ObjectShortName">r_Clk_Count[11]_i_1_n_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
    <wvobject fp_name="UART_TX_INST/r_Clk_Count[11]_i_1_n_0" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">UART_TX_INST/r_Clk_Count[11]_i_1_n_0</obj_property>
       <obj_property name="ObjectShortName">r_Clk_Count[11]_i_1_n_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="UART_RX_INST/r_Clk_Count[12]_i_1_n_0" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count[12]_i_1_n_0</obj_property>
-      <obj_property name="ObjectShortName">r_Clk_Count[12]_i_1_n_0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -626,14 +498,6 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="UART_RX_INST/r_Clk_Count[13]_i_2_n_0" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count[13]_i_2_n_0</obj_property>
-      <obj_property name="ObjectShortName">r_Clk_Count[13]_i_2_n_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
    <wvobject fp_name="UART_TX_INST/r_Clk_Count[13]_i_2_n_0" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">UART_TX_INST/r_Clk_Count[13]_i_2_n_0</obj_property>
@@ -646,14 +510,6 @@
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count[13]_i_3_n_0</obj_property>
       <obj_property name="ObjectShortName">r_Clk_Count[13]_i_3_n_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="UART_RX_INST/r_Clk_Count[13]_i_5_n_0" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count[13]_i_5_n_0</obj_property>
-      <obj_property name="ObjectShortName">r_Clk_Count[13]_i_5_n_0</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -1066,14 +922,6 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="UART_RX_INST/r_Clk_Count_reg[13]_i_4_n_7" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count_reg[13]_i_4_n_7</obj_property>
-      <obj_property name="ObjectShortName">r_Clk_Count_reg[13]_i_4_n_7</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
    <wvobject fp_name="UART_RX_INST/r_Clk_Count_reg_n_0__1" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">UART_RX_INST/r_Clk_Count_reg_n_0__1[0:0]</obj_property>
@@ -1214,62 +1062,6 @@
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">r_RX_SERIAL_IBUF</obj_property>
       <obj_property name="ObjectShortName">r_RX_SERIAL_IBUF</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="UART_TX_INST/r_TX_Data[3]_i_1_n_0" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_TX_INST/r_TX_Data[3]_i_1_n_0</obj_property>
-      <obj_property name="ObjectShortName">r_TX_Data[3]_i_1_n_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="UART_TX_INST/r_TX_Data_reg_n_0_" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_TX_INST/r_TX_Data_reg_n_0_[3:3]</obj_property>
-      <obj_property name="ObjectShortName">r_TX_Data_reg_n_0_[3:3]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="UART_TX_INST/r_TX_Done_i_1_n_0" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_TX_INST/r_TX_Done_i_1_n_0</obj_property>
-      <obj_property name="ObjectShortName">r_TX_Done_i_1_n_0</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="r_TX_DV" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">r_TX_DV</obj_property>
-      <obj_property name="ObjectShortName">r_TX_DV</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="UART_TX_INST_n_1" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_TX_INST_n_1</obj_property>
-      <obj_property name="ObjectShortName">UART_TX_INST_n_1</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="UART_TX_INST_n_2" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_TX_INST_n_2</obj_property>
-      <obj_property name="ObjectShortName">UART_TX_INST_n_2</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="UART_TX_INST/w_TX_DONE" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">UART_TX_INST/w_TX_DONE</obj_property>
-      <obj_property name="ObjectShortName">w_TX_DONE</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
