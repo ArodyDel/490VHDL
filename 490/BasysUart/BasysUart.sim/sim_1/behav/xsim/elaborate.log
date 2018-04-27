@@ -5,16 +5,4 @@ Using 2 slave threads.
 Starting static elaboration
 WARNING: [VRFC 10-1429] target slice is 8 elements ; value is 0 elements [C:/Users/arody/Documents/GitHub/490VHDL/490/BasysUart/BasysUart.srcs/sources_1/new/UART_RX.vhd:127]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling architecture rtl of entity xil_defaultlib.UART_TX [\UART_TX(g_clks_per_bit=87)\]
-Compiling architecture rtl of entity xil_defaultlib.UART_RX [\UART_RX(g_clks_per_bit=87)\]
-Compiling architecture behave of entity xil_defaultlib.uart_tb
-Built simulation snapshot uart_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

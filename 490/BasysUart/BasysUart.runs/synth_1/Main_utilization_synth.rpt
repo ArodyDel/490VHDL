@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
-| Date         : Fri Apr 27 06:36:28 2018
+| Date         : Fri Apr 27 07:16:03 2018
 | Host         : arody-PC running 64-bit Service Pack 1  (build 7601)
 | Command      : report_utilization -file Main_utilization_synth.rpt -pb Main_utilization_synth.pb
 | Design       : Main
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  141 |     0 |     20800 |  0.68 |
-|   LUT as Logic          |  141 |     0 |     20800 |  0.68 |
+| Slice LUTs*             |  143 |     0 |     20800 |  0.69 |
+|   LUT as Logic          |  143 |     0 |     20800 |  0.69 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
 | Slice Registers         |   97 |     0 |     41600 |  0.23 |
 |   Register as Flip Flop |   80 |     0 |     41600 |  0.19 |
@@ -153,9 +153,9 @@ Table of Contents
 | LUT6     |   79 |                 LUT |
 | LUT4     |   28 |                 LUT |
 | OBUF     |   17 |                  IO |
+| LUT2     |   17 |                 LUT |
 | LDCE     |   17 |        Flop & Latch |
 | LUT5     |   16 |                 LUT |
-| LUT2     |   16 |                 LUT |
 | MUXF7    |   14 |               MuxFx |
 | LUT3     |   13 |                 LUT |
 | CARRY4   |    8 |          CarryLogic |

@@ -145,21 +145,22 @@ process(initFlag,w_TX_DONE,r_TX_DV,r_RX_SERIAL)
         -- Tell the UART to send a command.
 
        -- w_TX_DONE<='1';
-        if(w_TX_DONE='0'and r_TX_DV/='1') then 
-            if(initflag='1') then
-                r_TX_DV   <= '1';
+        Case w_TX_DONE  is 
+        when '0'=> 
+            if(initflag='1' and r_TX_DV = '0') then
+                
                 r_TX_BYTE <= fullMSG(MSG_Index);
+                r_TX_DV   <= '1';
                 --r_TX_DV   <= '0'; 
                 end if;
-            end if;
-            if( w_TX_DONE ='1') then
+           when'1'=>
                 if(MSG_Index=166) then
                 initflag<='0';
                 end if;
              r_TX_DV   <= '0';
              MSG_Index<=MSG_Index+1;
              
-            end if;   
+            end case;   
        --end if;
        
        

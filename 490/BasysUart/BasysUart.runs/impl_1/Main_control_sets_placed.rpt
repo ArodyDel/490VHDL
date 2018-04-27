@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
-| Date         : Fri Apr 27 06:36:55 2018
+| Date         : Fri Apr 27 07:16:30 2018
 | Host         : arody-PC running 64-bit Service Pack 1  (build 7601)
 | Command      : report_control_sets -verbose -file Main_control_sets_placed.rpt
 | Design       : Main
@@ -33,10 +33,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              38 |           21 |
+| No           | No                    | No                     |              38 |           24 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               1 |            1 |
-| Yes          | No                    | No                     |              50 |           22 |
+| Yes          | No                    | No                     |              50 |           18 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               8 |            3 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -45,24 +45,24 @@ Table of Contents
 3. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------+--------------------------------------+-------------------------------+------------------+----------------+
-|         Clock Signal        |             Enable Signal            |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
-+-----------------------------+--------------------------------------+-------------------------------+------------------+----------------+
-|  UART_TX_INST/initflag0_out |                                      |                               |                1 |              1 |
-|  r_CLOCK_IBUF_BUFG          | UART_TX_INST/__0/i__n_0              |                               |                1 |              1 |
-|  UART_TX_INST/E[0]          |                                      | UART_TX_INST/w_TX_DONE        |                1 |              1 |
-|  r_CLOCK_IBUF_BUFG          | UART_RX_INST/buff[3]_i_1_n_0         |                               |                1 |              4 |
-|  r_CLOCK_IBUF_BUFG          | UART_RX_INST/buff[11]_i_2_n_0        | UART_RX_INST/buff[11]_i_1_n_0 |                1 |              4 |
-|  r_CLOCK_IBUF_BUFG          | UART_RX_INST/buff[19]_i_2_n_0        | UART_RX_INST/buff[19]_i_1_n_0 |                2 |              4 |
-|  r_CLOCK_IBUF_BUFG          | UART_RX_INST/buff[27]_i_1_n_0        |                               |                2 |              4 |
-|  r_CLOCK_IBUF_BUFG          | UART_RX_INST/state                   |                               |                3 |              5 |
-|  r_CLOCK_IBUF_BUFG          | UART_TX_INST/r_TX_Data[6]_i_1_n_0    |                               |                1 |              7 |
-|  UART_TX_INST/E[0]          |                                      |                               |                7 |              7 |
-|  UART_TX_INST/w_TX_DONE     |                                      |                               |                2 |              8 |
-|  r_CLOCK_IBUF_BUFG          | UART_RX_INST/r_Clk_Count             |                               |                7 |             14 |
-|  r_CLOCK_IBUF_BUFG          | UART_TX_INST/r_Clk_Count[13]_i_1_n_0 |                               |                7 |             15 |
-|  r_CLOCK_IBUF_BUFG          |                                      |                               |               11 |             22 |
-+-----------------------------+--------------------------------------+-------------------------------+------------------+----------------+
++----------------------------------+--------------------------------------+-------------------------------+------------------+----------------+
+|           Clock Signal           |             Enable Signal            |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
++----------------------------------+--------------------------------------+-------------------------------+------------------+----------------+
+|  r_CLOCK_IBUF_BUFG               | UART_TX_INST/__0/i__n_0              |                               |                1 |              1 |
+|  UART_TX_INST/r_TX_Data_reg[0]_0 |                                      |                               |                1 |              1 |
+|  r_TX_DV_reg_i_1_n_0             |                                      | UART_TX_INST/w_TX_DONE        |                1 |              1 |
+|  r_CLOCK_IBUF_BUFG               | UART_RX_INST/buff[3]_i_1_n_0         |                               |                2 |              4 |
+|  r_CLOCK_IBUF_BUFG               | UART_RX_INST/buff[11]_i_2_n_0        | UART_RX_INST/buff[11]_i_1_n_0 |                1 |              4 |
+|  r_CLOCK_IBUF_BUFG               | UART_RX_INST/buff[19]_i_2_n_0        | UART_RX_INST/buff[19]_i_1_n_0 |                2 |              4 |
+|  r_CLOCK_IBUF_BUFG               | UART_RX_INST/buff[27]_i_1_n_0        |                               |                1 |              4 |
+|  r_CLOCK_IBUF_BUFG               | UART_RX_INST/state                   |                               |                3 |              5 |
+|  r_CLOCK_IBUF_BUFG               | UART_TX_INST/r_TX_Data[6]_i_1_n_0    |                               |                1 |              7 |
+|  UART_TX_INST/E[0]               |                                      |                               |                7 |              7 |
+|  UART_TX_INST/w_TX_DONE          |                                      |                               |                3 |              8 |
+|  r_CLOCK_IBUF_BUFG               | UART_RX_INST/r_Clk_Count             |                               |                5 |             14 |
+|  r_CLOCK_IBUF_BUFG               | UART_TX_INST/r_Clk_Count[13]_i_1_n_0 |                               |                5 |             15 |
+|  r_CLOCK_IBUF_BUFG               |                                      |                               |               13 |             22 |
++----------------------------------+--------------------------------------+-------------------------------+------------------+----------------+
 
 
 +--------+-----------------------+

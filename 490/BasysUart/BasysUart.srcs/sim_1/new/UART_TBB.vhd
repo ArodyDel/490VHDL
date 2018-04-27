@@ -60,6 +60,19 @@ architecture behave of uart_tb is
   signal i_data_in       : std_logic_vector(7 downto 0):=X"39";
   signal flag_buff :std_logic;
   signal initflag:std_logic:='1';
+  
+    type MSG is array(0 to 165) of std_logic_vector(7 downto 0);
+  signal fullMSG:MSG:=(X"57", X"65", X"6c", X"63", X"6f", X"6d", X"65", X"20", X"74", X"6f", X"20", X"74", X"68", X"65", X"20", 
+  X"47", X"55", X"45", X"53", X"53", X"49", X"4e", X"47", X"20", X"47", X"41", X"4d", X"45", X"0a", X"50", X"6c", X"65", X"61", 
+  X"73", X"65", X"20", X"65", X"6e", X"74", X"65", X"72", X"20", X"61", X"20", X"6e", X"75", X"6d", X"62", X"65", X"72", X"20", 
+  X"66", X"6f", X"72", X"20", X"79", X"6f", X"75", X"72", X"20", X"6f", X"70", X"70", X"6f", X"6e", X"65", X"6e", X"74", X"20", 
+  X"74", X"6f", X"20", X"67", X"75", X"65", X"73", X"73", X"0a", X"4f", X"4e", X"4c", X"59", X"20", X"50", X"55", X"54", X"20", 
+  X"4e", X"55", X"4d", X"42", X"45", X"52", X"53", X"20", X"46", X"52", X"4f", X"4d", X"20", X"30", X"20", X"54", X"4f", X"20", 
+  X"39", X"39", X"39", X"0a", X"0a", X"57", X"61", X"69", X"74", X"20", X"75", X"6e", X"74", X"69", X"6c", X"20", X"62", X"6f", 
+  X"74", X"68", X"20", X"70", X"6c", X"61", X"79", X"65", X"72", X"73", X"20", X"61", X"72", X"65", X"20", X"72", X"65", X"61", 
+  X"64", X"79", X"2c", X"68", X"69", X"74", X"20", X"73", X"65", X"6e", X"64", X"20", X"61", X"74", X"20", X"73", X"61", X"6d", 
+  X"65", X"20", X"74", X"69", X"6d", X"65", X"0a");
+  signal MSG_Index : integer range 0 to 166 := 0;
    
   -- Low-level byte-write
   
@@ -103,11 +116,22 @@ begin
  
     -- Tell the UART to send a command.
     wait until rising_edge(r_CLOCK);
-    r_TX_DV   <= '1';
-    r_TX_BYTE <= X"B4";
-    wait until rising_edge(r_CLOCK);
-    r_TX_DV   <= '0';
-    wait until w_TX_DONE = '1';
+        if(w_TX_DONE='0'and r_TX_DV/='1') then 
+        if(initflag='1') then
+            r_TX_DV   <= '1';
+            r_TX_BYTE <=fullMSG(MSG_Index);
+            --r_TX_DV   <= '0'; 
+            end if;
+        end if;
+        wait until rising_edge(r_CLOCK);
+        if( w_TX_DONE ='1') then
+            if(MSG_Index=10) then
+            initflag<='0';
+            end if;
+         r_TX_DV   <= '0';
+         MSG_Index<=MSG_Index+1;
+         
+        end if;
  
      
     -- Send a command to the UART

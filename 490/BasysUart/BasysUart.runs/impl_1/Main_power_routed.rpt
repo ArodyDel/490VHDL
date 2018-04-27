@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
-| Date             : Fri Apr 27 06:37:12 2018
+| Date             : Fri Apr 27 07:16:49 2018
 | Host             : arody-PC running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file Main_power_routed.rpt -pb Main_power_summary_routed.pb -rpx Main_power_routed.rpx
 | Design           : Main
@@ -53,8 +53,8 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      287 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      141 |     20800 |            0.68 |
+| Slice Logic    |    <0.001 |      288 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      143 |     20800 |            0.69 |
 |   F7/F8 Muxes  |    <0.001 |       21 |     32600 |            0.06 |
 |   Register     |    <0.001 |       97 |     41600 |            0.23 |
 |   CARRY4       |    <0.001 |        8 |      8150 |            0.10 |
