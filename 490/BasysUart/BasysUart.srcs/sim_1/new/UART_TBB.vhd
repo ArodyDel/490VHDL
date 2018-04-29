@@ -4,7 +4,7 @@
 library ieee;
 use ieee.std_logic_1164.ALL;
 use ieee.numeric_std.all;
- 
+use IEEE.std_logic_unsigned.all;
 entity uart_tb is
 end uart_tb;
  
@@ -57,6 +57,7 @@ architecture behave of uart_tb is
   signal r_RX_SERIAL : std_logic := '1';
    signal Mbuff: std_logic_vector(31 downto 0); 
   signal MledBuff:std_logic_vector(31 downto 0);
+  signal testting:std_logic_vector(31 downto 0):=X"39373500";
   signal i_data_in       : std_logic_vector(7 downto 0):=X"39";
   signal flag_buff :std_logic;
   signal initflag:std_logic:='1';
@@ -73,6 +74,9 @@ architecture behave of uart_tb is
   X"64", X"79", X"2c", X"68", X"69", X"74", X"20", X"73", X"65", X"6e", X"64", X"20", X"61", X"74", X"20", X"73", X"61", X"6d", 
   X"65", X"20", X"74", X"69", X"6d", X"65", X"0a");
   signal MSG_Index : integer range 0 to 166 := 0;
+  signal BlueInputINT : integer := 0;
+  signal ledB: std_logic_vector(31 downto 0);
+  signal subASCII : std_logic_vector(7 downto 0):="00110000";
    
   -- Low-level byte-write
   
@@ -115,23 +119,23 @@ begin
   begin
  
     -- Tell the UART to send a command.
-    wait until rising_edge(r_CLOCK);
-        if(w_TX_DONE='0'and r_TX_DV/='1') then 
-        if(initflag='1') then
-            r_TX_DV   <= '1';
-            r_TX_BYTE <=fullMSG(MSG_Index);
-            --r_TX_DV   <= '0'; 
-            end if;
-        end if;
-        wait until rising_edge(r_CLOCK);
-        if( w_TX_DONE ='1') then
-            if(MSG_Index=10) then
-            initflag<='0';
-            end if;
-         r_TX_DV   <= '0';
-         MSG_Index<=MSG_Index+1;
+--    wait until rising_edge(r_CLOCK);
+--        if(w_TX_DONE='0'and r_TX_DV/='1') then 
+--        if(initflag='1') then
+--            r_TX_DV   <= '1';
+--            r_TX_BYTE <=fullMSG(MSG_Index);
+--            --r_TX_DV   <= '0'; 
+--            end if;
+--        end if;
+--        wait until rising_edge(r_CLOCK);
+--        if( w_TX_DONE ='1') then
+--            if(MSG_Index=10) then
+--            initflag<='0';
+--            end if;
+--         r_TX_DV   <= '0';
+--         MSG_Index<=MSG_Index+1;
          
-        end if;
+--        end if;
  
      
     -- Send a command to the UART
@@ -168,6 +172,50 @@ begin
      r_RX_SERIAL <= '1';
      wait for c_BIT_PERIOD;
 wait until rising_edge(r_CLOCK);
+
+--ledB(31 downto 24)<=testting(31 downto 24)-subASCII(7 downto 0);
+--BlueInputINT <= to_integer(unsigned(ledB(31 downto 24)));
+
+--wait until rising_edge(r_CLOCK);
+--BlueInputINT<=BlueInputINT*10;
+
+--ledB(23 downto 16)<=testting(23 downto 24)-subASCII(7 downto 0);
+--BlueInputINT <= to_integer(unsigned(ledB(23 downto 24)));
+
+--wait until rising_edge(r_CLOCK);
+
+
+            if(testting(31 downto 24)=X"00")then
+            BlueInputINT <=0;
+            else
+            
+               ledB(31 downto 24)<=testting(31 downto 24)-subASCII(7 downto 0);    --ones
+               BlueInputINT <= to_integer(unsigned(ledB(31 downto 24)));
+               wait until rising_edge(r_CLOCK);
+               
+               if(testting(23 downto 16)/=X"00")then                               --tens
+                    
+                    wait until rising_edge(r_CLOCK);
+                    BlueInputINT<=BlueInputINT*10;
+                    ledB(23 downto 16)<=testting(23 downto 16)-subASCII(7 downto 0);
+                    BlueInputINT <=BlueInputINT + to_integer(unsigned(ledB(23 downto 16)));
+                    wait until rising_edge(r_CLOCK);
+                            if(testting(15 downto 8)/=X"00")then                  --hundreds
+                                   wait until rising_edge(r_CLOCK);
+                                    BlueInputINT<=BlueInputINT*10;
+                                    ledB(15 downto 8)<=testting(15 downto 8)-subASCII(7 downto 0);
+                                    BlueInputINT <=BlueInputINT + to_integer(unsigned(ledB(15 downto 8)));
+                                       wait until rising_edge(r_CLOCK);          
+                                        if(testting(7 downto 0)/=X"00")then      --thousands
+                                            wait until rising_edge(r_CLOCK);
+                                            BlueInputINT<=BlueInputINT*10;
+                                            ledB(7 downto 0)<=testting(7 downto 0)-subASCII(7 downto 0);
+                                            BlueInputINT <=BlueInputINT + to_integer(unsigned(ledB(7 downto 0)));
+                                            wait until rising_edge(r_CLOCK);
+                                            end if;
+                                          end if;
+                                         end if;
+                                        end if;
     -- Check that the correct command was received
    -- if w_RX_BYTE = X"3F" then
      -- report "Test Passed - Correct Byte Received" severity note;

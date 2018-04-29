@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
-| Date         : Fri Apr 27 07:16:30 2018
+| Date         : Sun Apr 29 03:26:31 2018
 | Host         : arody-PC running 64-bit Service Pack 1  (build 7601)
 | Command      : report_control_sets -verbose -file Main_control_sets_placed.rpt
 | Design       : Main
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    14 |
-| Unused register locations in slices containing registers |    47 |
+| Number of unique control sets                            |    22 |
+| Unused register locations in slices containing registers |    53 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,49 +33,56 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              38 |           24 |
+| No           | No                    | No                     |             207 |           91 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |               1 |            1 |
-| Yes          | No                    | No                     |              50 |           18 |
+| No           | Yes                   | No                     |               4 |            3 |
+| Yes          | No                    | No                     |              84 |           30 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               8 |            3 |
+| Yes          | Yes                   | No                     |             140 |           39 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
-+----------------------------------+--------------------------------------+-------------------------------+------------------+----------------+
-|           Clock Signal           |             Enable Signal            |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
-+----------------------------------+--------------------------------------+-------------------------------+------------------+----------------+
-|  r_CLOCK_IBUF_BUFG               | UART_TX_INST/__0/i__n_0              |                               |                1 |              1 |
-|  UART_TX_INST/r_TX_Data_reg[0]_0 |                                      |                               |                1 |              1 |
-|  r_TX_DV_reg_i_1_n_0             |                                      | UART_TX_INST/w_TX_DONE        |                1 |              1 |
-|  r_CLOCK_IBUF_BUFG               | UART_RX_INST/buff[3]_i_1_n_0         |                               |                2 |              4 |
-|  r_CLOCK_IBUF_BUFG               | UART_RX_INST/buff[11]_i_2_n_0        | UART_RX_INST/buff[11]_i_1_n_0 |                1 |              4 |
-|  r_CLOCK_IBUF_BUFG               | UART_RX_INST/buff[19]_i_2_n_0        | UART_RX_INST/buff[19]_i_1_n_0 |                2 |              4 |
-|  r_CLOCK_IBUF_BUFG               | UART_RX_INST/buff[27]_i_1_n_0        |                               |                1 |              4 |
-|  r_CLOCK_IBUF_BUFG               | UART_RX_INST/state                   |                               |                3 |              5 |
-|  r_CLOCK_IBUF_BUFG               | UART_TX_INST/r_TX_Data[6]_i_1_n_0    |                               |                1 |              7 |
-|  UART_TX_INST/E[0]               |                                      |                               |                7 |              7 |
-|  UART_TX_INST/w_TX_DONE          |                                      |                               |                3 |              8 |
-|  r_CLOCK_IBUF_BUFG               | UART_RX_INST/r_Clk_Count             |                               |                5 |             14 |
-|  r_CLOCK_IBUF_BUFG               | UART_TX_INST/r_Clk_Count[13]_i_1_n_0 |                               |                5 |             15 |
-|  r_CLOCK_IBUF_BUFG               |                                      |                               |               13 |             22 |
-+----------------------------------+--------------------------------------+-------------------------------+------------------+----------------+
++---------------------------------------+--------------------------------------+-------------------------------+------------------+----------------+
+|              Clock Signal             |             Enable Signal            |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
++---------------------------------------+--------------------------------------+-------------------------------+------------------+----------------+
+|  UART_RX_INST/WINMSG_Index_reg_rep[3] |                                      |                               |                1 |              1 |
+|  r_CLOCK_IBUF_BUFG                    | UART_TX_INST/__0/i__n_3              |                               |                1 |              1 |
+|  r_CLOCK_IBUF_BUFG                    |                                      | UART_TX_INST/w_TX_DONE        |                3 |              4 |
+|  r_CLOCK_IBUF_BUFG                    | UART_RX_INST/state                   | UART_RX_INST/state[3]_i_1_n_3 |                1 |              4 |
+| ~r_CLOCK_IBUF_BUFG                    |                                      |                               |                3 |              4 |
+|  r_CLOCK_IBUF_BUFG                    | UART_TX_INST/E[0]                    |                               |                3 |              7 |
+|  r_CLOCK_IBUF_BUFG                    | UART_TX_INST/r_TX_Data[6]_i_1_n_3    |                               |                2 |              7 |
+|  r_CLOCK_IBUF_BUFG                    | UART_RX_INST/buff[23]_i_2_n_3        | UART_RX_INST/buff[23]_i_1_n_3 |                2 |              8 |
+|  r_CLOCK_IBUF_BUFG                    | UART_RX_INST/buff[31]_i_2_n_3        | UART_RX_INST/buff[31]_i_1_n_3 |                2 |              8 |
+|  r_CLOCK_IBUF_BUFG                    | UART_RX_INST/buff[7]_i_2_n_3         | UART_RX_INST/buff[7]_i_1_n_3  |                2 |              8 |
+|  r_CLOCK_IBUF_BUFG                    | UART_RX_INST/buff[15]_i_2_n_3        | UART_RX_INST/buff[15]_i_1_n_3 |                4 |              8 |
+|  r_CLOCK_IBUF_BUFG                    | UART_RX_INST/r_Clk_Count             |                               |                7 |             14 |
+|  r_CLOCK_IBUF_BUFG                    | UART_TX_INST/r_Clk_Count[13]_i_1_n_3 |                               |                6 |             15 |
+|  r_CLOCK_IBUF_BUFG                    |                                      |                               |               14 |             25 |
+|  n_1_669_BUFG                         |                                      |                               |               14 |             32 |
+|  n_2_178_BUFG                         |                                      |                               |               10 |             32 |
+| ~r_CLOCK_IBUF_BUFG                    | LOWMSG_Index[0]_i_2_n_3              | LOWMSG_Index[0]_i_1_n_3       |                8 |             32 |
+| ~r_CLOCK_IBUF_BUFG                    | HIGHMSG_Index_rep[3]_i_2_n_3         | HIGHMSG_Index_rep[3]_i_1_n_3  |               10 |             36 |
+| ~r_CLOCK_IBUF_BUFG                    | WINMSG_Index_rep[3]_i_2_n_3          | WINMSG_Index_rep[3]_i_1_n_3   |               10 |             36 |
+| ~r_CLOCK_IBUF_BUFG                    | MSG_Index_rep[7]_i_1_n_3             |                               |               11 |             40 |
+|  n_0_180_BUFG                         |                                      |                               |               22 |             48 |
+|  inputFlag3_out_BUFG                  |                                      |                               |               27 |             65 |
++---------------------------------------+--------------------------------------+-------------------------------+------------------+----------------+
 
 
 +--------+-----------------------+
 | Fanout | Number of ControlSets |
 +--------+-----------------------+
-| 1      |                     3 |
-| 4      |                     4 |
-| 5      |                     1 |
+| 1      |                     2 |
+| 4      |                     3 |
 | 7      |                     2 |
-| 8      |                     1 |
+| 8      |                     4 |
 | 14     |                     1 |
 | 15     |                     1 |
-| 16+    |                     1 |
+| 16+    |                     9 |
 +--------+-----------------------+
 
 

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
-| Date         : Fri Apr 27 07:16:49 2018
+| Date         : Sun Apr 29 03:26:50 2018
 | Host         : arody-PC running 64-bit Service Pack 1  (build 7601)
 | Command      : report_methodology -file Main_methodology_drc_routed.rpt -pb Main_methodology_drc_routed.pb -rpx Main_methodology_drc_routed.rpx
 | Design       : Main
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 35
+             Violations found: 180
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| TIMING-18 | Warning  | Missing input or output delay | 18         |
-| TIMING-20 | Warning  | Non-clocked latch             | 17         |
+| TIMING-18 | Warning  | Missing input or output delay | 2          |
+| TIMING-20 | Warning  | Non-clocked latch             | 178        |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -40,172 +40,897 @@ Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
-An output delay is missing on led[0] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#3 Warning
-Missing input or output delay  
-An output delay is missing on led[10] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#4 Warning
-Missing input or output delay  
-An output delay is missing on led[11] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#5 Warning
-Missing input or output delay  
-An output delay is missing on led[12] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#6 Warning
-Missing input or output delay  
-An output delay is missing on led[13] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#7 Warning
-Missing input or output delay  
-An output delay is missing on led[14] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#8 Warning
-Missing input or output delay  
-An output delay is missing on led[15] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#9 Warning
-Missing input or output delay  
-An output delay is missing on led[1] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#10 Warning
-Missing input or output delay  
-An output delay is missing on led[2] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#11 Warning
-Missing input or output delay  
-An output delay is missing on led[3] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#12 Warning
-Missing input or output delay  
-An output delay is missing on led[4] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#13 Warning
-Missing input or output delay  
-An output delay is missing on led[5] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#14 Warning
-Missing input or output delay  
-An output delay is missing on led[6] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#15 Warning
-Missing input or output delay  
-An output delay is missing on led[7] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#16 Warning
-Missing input or output delay  
-An output delay is missing on led[8] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#17 Warning
-Missing input or output delay  
-An output delay is missing on led[9] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#18 Warning
-Missing input or output delay  
 An output delay is missing on w_TX_SERIAL relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-20#1 Warning
 Non-clocked latch  
-The latch MSG_Index_reg_rep[0] cannot be properly analyzed as its control pin MSG_Index_reg_rep[0]/G is not reached by a timing clock
+The latch BlueGuessINT_reg[0] cannot be properly analyzed as its control pin BlueGuessINT_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#2 Warning
 Non-clocked latch  
-The latch MSG_Index_reg_rep[1] cannot be properly analyzed as its control pin MSG_Index_reg_rep[1]/G is not reached by a timing clock
+The latch BlueGuessINT_reg[10] cannot be properly analyzed as its control pin BlueGuessINT_reg[10]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#3 Warning
 Non-clocked latch  
-The latch MSG_Index_reg_rep[2] cannot be properly analyzed as its control pin MSG_Index_reg_rep[2]/G is not reached by a timing clock
+The latch BlueGuessINT_reg[11] cannot be properly analyzed as its control pin BlueGuessINT_reg[11]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#4 Warning
 Non-clocked latch  
-The latch MSG_Index_reg_rep[3] cannot be properly analyzed as its control pin MSG_Index_reg_rep[3]/G is not reached by a timing clock
+The latch BlueGuessINT_reg[12] cannot be properly analyzed as its control pin BlueGuessINT_reg[12]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#5 Warning
 Non-clocked latch  
-The latch MSG_Index_reg_rep[4] cannot be properly analyzed as its control pin MSG_Index_reg_rep[4]/G is not reached by a timing clock
+The latch BlueGuessINT_reg[13] cannot be properly analyzed as its control pin BlueGuessINT_reg[13]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#6 Warning
 Non-clocked latch  
-The latch MSG_Index_reg_rep[5] cannot be properly analyzed as its control pin MSG_Index_reg_rep[5]/G is not reached by a timing clock
+The latch BlueGuessINT_reg[14] cannot be properly analyzed as its control pin BlueGuessINT_reg[14]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#7 Warning
 Non-clocked latch  
-The latch MSG_Index_reg_rep[6] cannot be properly analyzed as its control pin MSG_Index_reg_rep[6]/G is not reached by a timing clock
+The latch BlueGuessINT_reg[15] cannot be properly analyzed as its control pin BlueGuessINT_reg[15]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#8 Warning
 Non-clocked latch  
-The latch MSG_Index_reg_rep[7] cannot be properly analyzed as its control pin MSG_Index_reg_rep[7]/G is not reached by a timing clock
+The latch BlueGuessINT_reg[16] cannot be properly analyzed as its control pin BlueGuessINT_reg[16]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#9 Warning
 Non-clocked latch  
-The latch initflag_reg cannot be properly analyzed as its control pin initflag_reg/G is not reached by a timing clock
+The latch BlueGuessINT_reg[17] cannot be properly analyzed as its control pin BlueGuessINT_reg[17]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#10 Warning
 Non-clocked latch  
-The latch r_TX_BYTE_reg[0] cannot be properly analyzed as its control pin r_TX_BYTE_reg[0]/G is not reached by a timing clock
+The latch BlueGuessINT_reg[18] cannot be properly analyzed as its control pin BlueGuessINT_reg[18]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#11 Warning
 Non-clocked latch  
-The latch r_TX_BYTE_reg[1] cannot be properly analyzed as its control pin r_TX_BYTE_reg[1]/G is not reached by a timing clock
+The latch BlueGuessINT_reg[19] cannot be properly analyzed as its control pin BlueGuessINT_reg[19]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#12 Warning
 Non-clocked latch  
-The latch r_TX_BYTE_reg[2] cannot be properly analyzed as its control pin r_TX_BYTE_reg[2]/G is not reached by a timing clock
+The latch BlueGuessINT_reg[1] cannot be properly analyzed as its control pin BlueGuessINT_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#13 Warning
 Non-clocked latch  
-The latch r_TX_BYTE_reg[3] cannot be properly analyzed as its control pin r_TX_BYTE_reg[3]/G is not reached by a timing clock
+The latch BlueGuessINT_reg[20] cannot be properly analyzed as its control pin BlueGuessINT_reg[20]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#14 Warning
 Non-clocked latch  
-The latch r_TX_BYTE_reg[4] cannot be properly analyzed as its control pin r_TX_BYTE_reg[4]/G is not reached by a timing clock
+The latch BlueGuessINT_reg[21] cannot be properly analyzed as its control pin BlueGuessINT_reg[21]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#15 Warning
 Non-clocked latch  
-The latch r_TX_BYTE_reg[5] cannot be properly analyzed as its control pin r_TX_BYTE_reg[5]/G is not reached by a timing clock
+The latch BlueGuessINT_reg[22] cannot be properly analyzed as its control pin BlueGuessINT_reg[22]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#16 Warning
 Non-clocked latch  
-The latch r_TX_BYTE_reg[6] cannot be properly analyzed as its control pin r_TX_BYTE_reg[6]/G is not reached by a timing clock
+The latch BlueGuessINT_reg[23] cannot be properly analyzed as its control pin BlueGuessINT_reg[23]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#17 Warning
 Non-clocked latch  
-The latch r_TX_DV_reg cannot be properly analyzed as its control pin r_TX_DV_reg/G is not reached by a timing clock
+The latch BlueGuessINT_reg[24] cannot be properly analyzed as its control pin BlueGuessINT_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch BlueGuessINT_reg[25] cannot be properly analyzed as its control pin BlueGuessINT_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch BlueGuessINT_reg[26] cannot be properly analyzed as its control pin BlueGuessINT_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch BlueGuessINT_reg[27] cannot be properly analyzed as its control pin BlueGuessINT_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch BlueGuessINT_reg[28] cannot be properly analyzed as its control pin BlueGuessINT_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch BlueGuessINT_reg[29] cannot be properly analyzed as its control pin BlueGuessINT_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch BlueGuessINT_reg[2] cannot be properly analyzed as its control pin BlueGuessINT_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch BlueGuessINT_reg[30] cannot be properly analyzed as its control pin BlueGuessINT_reg[30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#25 Warning
+Non-clocked latch  
+The latch BlueGuessINT_reg[31] cannot be properly analyzed as its control pin BlueGuessINT_reg[31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch BlueGuessINT_reg[3] cannot be properly analyzed as its control pin BlueGuessINT_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch BlueGuessINT_reg[4] cannot be properly analyzed as its control pin BlueGuessINT_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch BlueGuessINT_reg[5] cannot be properly analyzed as its control pin BlueGuessINT_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch BlueGuessINT_reg[6] cannot be properly analyzed as its control pin BlueGuessINT_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch BlueGuessINT_reg[7] cannot be properly analyzed as its control pin BlueGuessINT_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch BlueGuessINT_reg[8] cannot be properly analyzed as its control pin BlueGuessINT_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch BlueGuessINT_reg[9] cannot be properly analyzed as its control pin BlueGuessINT_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#33 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[0] cannot be properly analyzed as its control pin BlueGuess_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#34 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[10] cannot be properly analyzed as its control pin BlueGuess_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#35 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[11] cannot be properly analyzed as its control pin BlueGuess_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#36 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[12] cannot be properly analyzed as its control pin BlueGuess_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#37 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[13] cannot be properly analyzed as its control pin BlueGuess_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#38 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[14] cannot be properly analyzed as its control pin BlueGuess_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#39 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[15] cannot be properly analyzed as its control pin BlueGuess_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#40 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[16] cannot be properly analyzed as its control pin BlueGuess_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#41 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[17] cannot be properly analyzed as its control pin BlueGuess_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#42 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[18] cannot be properly analyzed as its control pin BlueGuess_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#43 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[19] cannot be properly analyzed as its control pin BlueGuess_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#44 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[1] cannot be properly analyzed as its control pin BlueGuess_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#45 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[20] cannot be properly analyzed as its control pin BlueGuess_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#46 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[21] cannot be properly analyzed as its control pin BlueGuess_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#47 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[22] cannot be properly analyzed as its control pin BlueGuess_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#48 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[23] cannot be properly analyzed as its control pin BlueGuess_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#49 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[24] cannot be properly analyzed as its control pin BlueGuess_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#50 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[25] cannot be properly analyzed as its control pin BlueGuess_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#51 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[26] cannot be properly analyzed as its control pin BlueGuess_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#52 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[27] cannot be properly analyzed as its control pin BlueGuess_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#53 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[28] cannot be properly analyzed as its control pin BlueGuess_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#54 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[29] cannot be properly analyzed as its control pin BlueGuess_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#55 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[2] cannot be properly analyzed as its control pin BlueGuess_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#56 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[30] cannot be properly analyzed as its control pin BlueGuess_reg[30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#57 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[31] cannot be properly analyzed as its control pin BlueGuess_reg[31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#58 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[3] cannot be properly analyzed as its control pin BlueGuess_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#59 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[4] cannot be properly analyzed as its control pin BlueGuess_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#60 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[5] cannot be properly analyzed as its control pin BlueGuess_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#61 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[6] cannot be properly analyzed as its control pin BlueGuess_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#62 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[7] cannot be properly analyzed as its control pin BlueGuess_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#63 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[8] cannot be properly analyzed as its control pin BlueGuess_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#64 Warning
+Non-clocked latch  
+The latch BlueGuess_reg[9] cannot be properly analyzed as its control pin BlueGuess_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#65 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[0] cannot be properly analyzed as its control pin BlueInputINT_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#66 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[10] cannot be properly analyzed as its control pin BlueInputINT_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#67 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[11] cannot be properly analyzed as its control pin BlueInputINT_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#68 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[12] cannot be properly analyzed as its control pin BlueInputINT_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#69 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[13] cannot be properly analyzed as its control pin BlueInputINT_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#70 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[14] cannot be properly analyzed as its control pin BlueInputINT_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#71 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[15] cannot be properly analyzed as its control pin BlueInputINT_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#72 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[16] cannot be properly analyzed as its control pin BlueInputINT_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#73 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[17] cannot be properly analyzed as its control pin BlueInputINT_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#74 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[18] cannot be properly analyzed as its control pin BlueInputINT_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#75 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[19] cannot be properly analyzed as its control pin BlueInputINT_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#76 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[1] cannot be properly analyzed as its control pin BlueInputINT_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#77 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[20] cannot be properly analyzed as its control pin BlueInputINT_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#78 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[21] cannot be properly analyzed as its control pin BlueInputINT_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#79 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[22] cannot be properly analyzed as its control pin BlueInputINT_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#80 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[23] cannot be properly analyzed as its control pin BlueInputINT_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#81 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[24] cannot be properly analyzed as its control pin BlueInputINT_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#82 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[25] cannot be properly analyzed as its control pin BlueInputINT_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#83 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[26] cannot be properly analyzed as its control pin BlueInputINT_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#84 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[27] cannot be properly analyzed as its control pin BlueInputINT_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#85 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[28] cannot be properly analyzed as its control pin BlueInputINT_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#86 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[29] cannot be properly analyzed as its control pin BlueInputINT_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#87 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[2] cannot be properly analyzed as its control pin BlueInputINT_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#88 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[30] cannot be properly analyzed as its control pin BlueInputINT_reg[30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#89 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[31] cannot be properly analyzed as its control pin BlueInputINT_reg[31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#90 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[3] cannot be properly analyzed as its control pin BlueInputINT_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#91 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[4] cannot be properly analyzed as its control pin BlueInputINT_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#92 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[5] cannot be properly analyzed as its control pin BlueInputINT_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#93 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[6] cannot be properly analyzed as its control pin BlueInputINT_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#94 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[7] cannot be properly analyzed as its control pin BlueInputINT_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#95 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[8] cannot be properly analyzed as its control pin BlueInputINT_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#96 Warning
+Non-clocked latch  
+The latch BlueInputINT_reg[9] cannot be properly analyzed as its control pin BlueInputINT_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#97 Warning
+Non-clocked latch  
+The latch BlueInput_reg[0] cannot be properly analyzed as its control pin BlueInput_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#98 Warning
+Non-clocked latch  
+The latch BlueInput_reg[10] cannot be properly analyzed as its control pin BlueInput_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#99 Warning
+Non-clocked latch  
+The latch BlueInput_reg[11] cannot be properly analyzed as its control pin BlueInput_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#100 Warning
+Non-clocked latch  
+The latch BlueInput_reg[12] cannot be properly analyzed as its control pin BlueInput_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#101 Warning
+Non-clocked latch  
+The latch BlueInput_reg[13] cannot be properly analyzed as its control pin BlueInput_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#102 Warning
+Non-clocked latch  
+The latch BlueInput_reg[14] cannot be properly analyzed as its control pin BlueInput_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#103 Warning
+Non-clocked latch  
+The latch BlueInput_reg[15] cannot be properly analyzed as its control pin BlueInput_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#104 Warning
+Non-clocked latch  
+The latch BlueInput_reg[16] cannot be properly analyzed as its control pin BlueInput_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#105 Warning
+Non-clocked latch  
+The latch BlueInput_reg[17] cannot be properly analyzed as its control pin BlueInput_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#106 Warning
+Non-clocked latch  
+The latch BlueInput_reg[18] cannot be properly analyzed as its control pin BlueInput_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#107 Warning
+Non-clocked latch  
+The latch BlueInput_reg[19] cannot be properly analyzed as its control pin BlueInput_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#108 Warning
+Non-clocked latch  
+The latch BlueInput_reg[1] cannot be properly analyzed as its control pin BlueInput_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#109 Warning
+Non-clocked latch  
+The latch BlueInput_reg[20] cannot be properly analyzed as its control pin BlueInput_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#110 Warning
+Non-clocked latch  
+The latch BlueInput_reg[21] cannot be properly analyzed as its control pin BlueInput_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#111 Warning
+Non-clocked latch  
+The latch BlueInput_reg[22] cannot be properly analyzed as its control pin BlueInput_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#112 Warning
+Non-clocked latch  
+The latch BlueInput_reg[23] cannot be properly analyzed as its control pin BlueInput_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#113 Warning
+Non-clocked latch  
+The latch BlueInput_reg[24] cannot be properly analyzed as its control pin BlueInput_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#114 Warning
+Non-clocked latch  
+The latch BlueInput_reg[25] cannot be properly analyzed as its control pin BlueInput_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#115 Warning
+Non-clocked latch  
+The latch BlueInput_reg[26] cannot be properly analyzed as its control pin BlueInput_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#116 Warning
+Non-clocked latch  
+The latch BlueInput_reg[27] cannot be properly analyzed as its control pin BlueInput_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#117 Warning
+Non-clocked latch  
+The latch BlueInput_reg[28] cannot be properly analyzed as its control pin BlueInput_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#118 Warning
+Non-clocked latch  
+The latch BlueInput_reg[29] cannot be properly analyzed as its control pin BlueInput_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#119 Warning
+Non-clocked latch  
+The latch BlueInput_reg[2] cannot be properly analyzed as its control pin BlueInput_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#120 Warning
+Non-clocked latch  
+The latch BlueInput_reg[30] cannot be properly analyzed as its control pin BlueInput_reg[30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#121 Warning
+Non-clocked latch  
+The latch BlueInput_reg[31] cannot be properly analyzed as its control pin BlueInput_reg[31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#122 Warning
+Non-clocked latch  
+The latch BlueInput_reg[3] cannot be properly analyzed as its control pin BlueInput_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#123 Warning
+Non-clocked latch  
+The latch BlueInput_reg[4] cannot be properly analyzed as its control pin BlueInput_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#124 Warning
+Non-clocked latch  
+The latch BlueInput_reg[5] cannot be properly analyzed as its control pin BlueInput_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#125 Warning
+Non-clocked latch  
+The latch BlueInput_reg[6] cannot be properly analyzed as its control pin BlueInput_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#126 Warning
+Non-clocked latch  
+The latch BlueInput_reg[7] cannot be properly analyzed as its control pin BlueInput_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#127 Warning
+Non-clocked latch  
+The latch BlueInput_reg[8] cannot be properly analyzed as its control pin BlueInput_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#128 Warning
+Non-clocked latch  
+The latch BlueInput_reg[9] cannot be properly analyzed as its control pin BlueInput_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#129 Warning
+Non-clocked latch  
+The latch change_reg cannot be properly analyzed as its control pin change_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#130 Warning
+Non-clocked latch  
+The latch inputFlag_reg cannot be properly analyzed as its control pin inputFlag_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#131 Warning
+Non-clocked latch  
+The latch ledB_reg[0] cannot be properly analyzed as its control pin ledB_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#132 Warning
+Non-clocked latch  
+The latch ledB_reg[10] cannot be properly analyzed as its control pin ledB_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#133 Warning
+Non-clocked latch  
+The latch ledB_reg[11] cannot be properly analyzed as its control pin ledB_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#134 Warning
+Non-clocked latch  
+The latch ledB_reg[12] cannot be properly analyzed as its control pin ledB_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#135 Warning
+Non-clocked latch  
+The latch ledB_reg[13] cannot be properly analyzed as its control pin ledB_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#136 Warning
+Non-clocked latch  
+The latch ledB_reg[14] cannot be properly analyzed as its control pin ledB_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#137 Warning
+Non-clocked latch  
+The latch ledB_reg[15] cannot be properly analyzed as its control pin ledB_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#138 Warning
+Non-clocked latch  
+The latch ledB_reg[16] cannot be properly analyzed as its control pin ledB_reg[16]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#139 Warning
+Non-clocked latch  
+The latch ledB_reg[17] cannot be properly analyzed as its control pin ledB_reg[17]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#140 Warning
+Non-clocked latch  
+The latch ledB_reg[18] cannot be properly analyzed as its control pin ledB_reg[18]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#141 Warning
+Non-clocked latch  
+The latch ledB_reg[19] cannot be properly analyzed as its control pin ledB_reg[19]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#142 Warning
+Non-clocked latch  
+The latch ledB_reg[1] cannot be properly analyzed as its control pin ledB_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#143 Warning
+Non-clocked latch  
+The latch ledB_reg[20] cannot be properly analyzed as its control pin ledB_reg[20]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#144 Warning
+Non-clocked latch  
+The latch ledB_reg[21] cannot be properly analyzed as its control pin ledB_reg[21]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#145 Warning
+Non-clocked latch  
+The latch ledB_reg[22] cannot be properly analyzed as its control pin ledB_reg[22]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#146 Warning
+Non-clocked latch  
+The latch ledB_reg[23] cannot be properly analyzed as its control pin ledB_reg[23]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#147 Warning
+Non-clocked latch  
+The latch ledB_reg[24] cannot be properly analyzed as its control pin ledB_reg[24]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#148 Warning
+Non-clocked latch  
+The latch ledB_reg[25] cannot be properly analyzed as its control pin ledB_reg[25]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#149 Warning
+Non-clocked latch  
+The latch ledB_reg[26] cannot be properly analyzed as its control pin ledB_reg[26]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#150 Warning
+Non-clocked latch  
+The latch ledB_reg[27] cannot be properly analyzed as its control pin ledB_reg[27]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#151 Warning
+Non-clocked latch  
+The latch ledB_reg[28] cannot be properly analyzed as its control pin ledB_reg[28]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#152 Warning
+Non-clocked latch  
+The latch ledB_reg[29] cannot be properly analyzed as its control pin ledB_reg[29]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#153 Warning
+Non-clocked latch  
+The latch ledB_reg[2] cannot be properly analyzed as its control pin ledB_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#154 Warning
+Non-clocked latch  
+The latch ledB_reg[30] cannot be properly analyzed as its control pin ledB_reg[30]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#155 Warning
+Non-clocked latch  
+The latch ledB_reg[31] cannot be properly analyzed as its control pin ledB_reg[31]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#156 Warning
+Non-clocked latch  
+The latch ledB_reg[3] cannot be properly analyzed as its control pin ledB_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#157 Warning
+Non-clocked latch  
+The latch ledB_reg[4] cannot be properly analyzed as its control pin ledB_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#158 Warning
+Non-clocked latch  
+The latch ledB_reg[5] cannot be properly analyzed as its control pin ledB_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#159 Warning
+Non-clocked latch  
+The latch ledB_reg[6] cannot be properly analyzed as its control pin ledB_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#160 Warning
+Non-clocked latch  
+The latch ledB_reg[7] cannot be properly analyzed as its control pin ledB_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#161 Warning
+Non-clocked latch  
+The latch ledB_reg[8] cannot be properly analyzed as its control pin ledB_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#162 Warning
+Non-clocked latch  
+The latch ledB_reg[9] cannot be properly analyzed as its control pin ledB_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#163 Warning
+Non-clocked latch  
+The latch led_reg[0] cannot be properly analyzed as its control pin led_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#164 Warning
+Non-clocked latch  
+The latch led_reg[10] cannot be properly analyzed as its control pin led_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#165 Warning
+Non-clocked latch  
+The latch led_reg[11] cannot be properly analyzed as its control pin led_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#166 Warning
+Non-clocked latch  
+The latch led_reg[12] cannot be properly analyzed as its control pin led_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#167 Warning
+Non-clocked latch  
+The latch led_reg[13] cannot be properly analyzed as its control pin led_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#168 Warning
+Non-clocked latch  
+The latch led_reg[14] cannot be properly analyzed as its control pin led_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#169 Warning
+Non-clocked latch  
+The latch led_reg[15] cannot be properly analyzed as its control pin led_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#170 Warning
+Non-clocked latch  
+The latch led_reg[1] cannot be properly analyzed as its control pin led_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#171 Warning
+Non-clocked latch  
+The latch led_reg[2] cannot be properly analyzed as its control pin led_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#172 Warning
+Non-clocked latch  
+The latch led_reg[3] cannot be properly analyzed as its control pin led_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#173 Warning
+Non-clocked latch  
+The latch led_reg[4] cannot be properly analyzed as its control pin led_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#174 Warning
+Non-clocked latch  
+The latch led_reg[5] cannot be properly analyzed as its control pin led_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#175 Warning
+Non-clocked latch  
+The latch led_reg[6] cannot be properly analyzed as its control pin led_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#176 Warning
+Non-clocked latch  
+The latch led_reg[7] cannot be properly analyzed as its control pin led_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#177 Warning
+Non-clocked latch  
+The latch led_reg[8] cannot be properly analyzed as its control pin led_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#178 Warning
+Non-clocked latch  
+The latch led_reg[9] cannot be properly analyzed as its control pin led_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 

@@ -28,7 +28,8 @@ entity UART_RX is
     o_RX_Byte   : out std_logic_vector(7 downto 0);
     o_buff      : out std_logic_vector(31 downto 0);
     o_ledBuff  :  out std_logic_vector(31 downto 0);
-    o_buffDone :out std_logic
+    o_buffDone :out std_logic;
+    o_status: out std_logic_vector(1 downto 0)
     
     );
 end UART_RX;
@@ -54,7 +55,9 @@ architecture rtl of UART_RX is
    signal ledBuff:std_logic_vector(31 downto 0);
    signal subASCII : std_logic_vector(7 downto 0):="00110000";
    signal buffDone:std_logic:='0';
-
+   signal status:std_logic_vector(1 downto 0):="00";
+   signal BlueIN:std_logic_vector(31 downto 0);
+   signal first: std_logic:='0'; 
    
 begin
  
@@ -81,7 +84,7 @@ begin
           r_RX_DV     <= '0';
           r_Clk_Count <= 0;
           r_Bit_Index <= 0;          
-          
+          buffDone<='0';
  
           if r_RX_Data = '0' then       -- Start bit detected
             r_SM_Main <= s_RX_Start_Bit;
@@ -132,6 +135,22 @@ begin
                   buff(7 downto 0)<=X"00";
                   ledBuff(7 downto 0)<=buff(7 downto 0);                                
                  
+                        if(first='0') then
+           BlueIN<=buff;
+           
+           else
+               if(BlueIN<buff)then
+               status<="01";
+               elsif(BlueIN>buff) then
+               status<="10";
+               elsif(BlueIN=buff) then
+               status<="11";
+               else
+               status<="00";
+               end if;
+          end if;                 
+                 
+                 
                   elsif (state=1) then
                   buff(23 downto 16)<=X"00";
                   ledBuff(23 downto 16)<=buff(23 downto 16);
@@ -139,15 +158,60 @@ begin
                   ledBuff(15 downto 8)<=buff(15 downto 8);
                   buff(7 downto 0)<=X"00";
                   ledBuff(7 downto 0)<=buff(7 downto 0);
+                        if(first='0') then
+           BlueIN<=buff;
+           
+           else
+               if(BlueIN<buff)then
+               status<="01";
+               elsif(BlueIN>buff) then
+               status<="10";
+               elsif(BlueIN=buff) then
+               status<="11";
+               else
+               status<="00";
+               end if;
+          end if;     
                    
                    elsif (state=2) then
                    buff(15 downto 8)<=X"00";
                    ledBuff(15 downto 8)<=buff(15 downto 8 );
                   buff(7 downto 0)<=X"00";
-                  ledBuff(7 downto 0)<=buff(7 downto 0);              
+                  ledBuff(7 downto 0)<=buff(7 downto 0);
+                                
+                        if(first='0') then
+           BlueIN<=buff;
+           
+           else
+               if(BlueIN<buff)then
+               status<="01";
+               elsif(BlueIN>buff) then
+               status<="10";
+               elsif(BlueIN=buff) then
+               status<="11";
+               else
+               status<="00";
+               end if;
+          end if;
+                 elsif (state=3) then
+                        if(first='0') then
+                 BlueIN<=buff;
+                 
+                 else
+                     if(BlueIN<buff)then
+                     status<="01";
+                     elsif(BlueIN>buff) then
+                     status<="10";
+                     elsif(BlueIN=buff) then
+                     status<="11";
+                     else
+                     status<="00";
+                     end if;
+                end if;  
                   
                   end if;                
              state<=0;
+             first<='1';
              buffDone<='1';
              end if;
              if(r_RX_Byte/=X"0A") then
@@ -213,5 +277,6 @@ begin
   o_buff<=buff;
   o_buffDone<=buffDone;
   o_ledbuff<=ledbuff;
+  o_status<=status;
    
 end rtl;
