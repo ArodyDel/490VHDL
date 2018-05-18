@@ -116,6 +116,7 @@ begin
   r_CLOCK <= not r_CLOCK after 50 ns;
    
   process is
+  variable GINT  : integer;
   begin
  
     -- Tell the UART to send a command.
@@ -185,37 +186,37 @@ wait until rising_edge(r_CLOCK);
 --wait until rising_edge(r_CLOCK);
 
 
-            if(testting(31 downto 24)=X"00")then
-            BlueInputINT <=0;
-            else
+--            if(testting(31 downto 24)=X"00")then
+--            BlueInputINT <=0;
+--            else
             
-               ledB(31 downto 24)<=testting(31 downto 24)-subASCII(7 downto 0);    --ones
-               BlueInputINT <= to_integer(unsigned(ledB(31 downto 24)));
-               wait until rising_edge(r_CLOCK);
+--               ledB(31 downto 24)<=testting(31 downto 24)-subASCII(7 downto 0);    --ones
+--               BlueInputINT <= to_integer(unsigned(ledB(31 downto 24)));
+--               wait until rising_edge(r_CLOCK);
                
-               if(testting(23 downto 16)/=X"00")then                               --tens
+--               if(testting(23 downto 16)/=X"00")then                               --tens
                     
-                    wait until rising_edge(r_CLOCK);
-                    BlueInputINT<=BlueInputINT*10;
-                    ledB(23 downto 16)<=testting(23 downto 16)-subASCII(7 downto 0);
-                    BlueInputINT <=BlueInputINT + to_integer(unsigned(ledB(23 downto 16)));
-                    wait until rising_edge(r_CLOCK);
-                            if(testting(15 downto 8)/=X"00")then                  --hundreds
-                                   wait until rising_edge(r_CLOCK);
-                                    BlueInputINT<=BlueInputINT*10;
-                                    ledB(15 downto 8)<=testting(15 downto 8)-subASCII(7 downto 0);
-                                    BlueInputINT <=BlueInputINT + to_integer(unsigned(ledB(15 downto 8)));
-                                       wait until rising_edge(r_CLOCK);          
-                                        if(testting(7 downto 0)/=X"00")then      --thousands
-                                            wait until rising_edge(r_CLOCK);
-                                            BlueInputINT<=BlueInputINT*10;
-                                            ledB(7 downto 0)<=testting(7 downto 0)-subASCII(7 downto 0);
-                                            BlueInputINT <=BlueInputINT + to_integer(unsigned(ledB(7 downto 0)));
-                                            wait until rising_edge(r_CLOCK);
-                                            end if;
-                                          end if;
-                                         end if;
-                                        end if;
+--                    wait until rising_edge(r_CLOCK);
+--                    BlueInputINT<=BlueInputINT*10;
+--                    ledB(23 downto 16)<=testting(23 downto 16)-subASCII(7 downto 0);
+--                    BlueInputINT <=BlueInputINT + to_integer(unsigned(ledB(23 downto 16)));
+--                    wait until rising_edge(r_CLOCK);
+--                            if(testting(15 downto 8)/=X"00")then                  --hundreds
+--                                   wait until rising_edge(r_CLOCK);
+--                                    BlueInputINT<=BlueInputINT*10;
+--                                    ledB(15 downto 8)<=testting(15 downto 8)-subASCII(7 downto 0);
+--                                    BlueInputINT <=BlueInputINT + to_integer(unsigned(ledB(15 downto 8)));
+--                                       wait until rising_edge(r_CLOCK);          
+--                                        if(testting(7 downto 0)/=X"00")then      --thousands
+--                                            wait until rising_edge(r_CLOCK);
+--                                            BlueInputINT<=BlueInputINT*10;
+--                                            ledB(7 downto 0)<=testting(7 downto 0)-subASCII(7 downto 0);
+--                                            BlueInputINT <=BlueInputINT + to_integer(unsigned(ledB(7 downto 0)));
+--                                            wait until rising_edge(r_CLOCK);
+--                                            end if;
+--                                          end if;
+--                                         end if;
+--                                        end if;
     -- Check that the correct command was received
    -- if w_RX_BYTE = X"3F" then
      -- report "Test Passed - Correct Byte Received" severity note;
@@ -224,6 +225,33 @@ wait until rising_edge(r_CLOCK);
    -- end if;
  
    -- assert false report "Tests Complete" severity failure;
+     
+            if(testting(31 downto 24)=X"00")then
+    GINT :=0;
+    else
+       ledB(31 downto 24)<=testting(31 downto 24)-subASCII(7 downto 0);    --ones
+       GINT := to_integer(unsigned(ledB(31 downto 24)));
+       
+       if(testting(23 downto 16)/=X"00")then                               --tens
+            GINT:=GINT*10;
+            ledB(23 downto 16)<=testting(23 downto 16)-subASCII(7 downto 0);
+            GINT :=GINT + to_integer(unsigned(ledB(23 downto 16)));
+            
+                    if(testting(15 downto 8)/=X"00")then                  --hundreds
+                            GINT:=GINT*10;
+                            ledB(15 downto 8)<=testting(15 downto 8)-subASCII(7 downto 0);
+                            GINT :=GINT + to_integer(unsigned(ledB(15 downto 8)));
+                                           
+                                if(testting(7 downto 0)/=X"00")then      --thousands
+                                    GINT:=GINT*10;
+                                    ledB(7 downto 0)<=testting(7 downto 0)-subASCII(7 downto 0);
+                                    GINT :=GINT + to_integer(unsigned(ledB(7 downto 0)));
+                                    end if;
+                                  end if;
+                                 end if;
+                                end if;             
+    BlueInputINT<=GINT;     
+     
      
   end process;
    

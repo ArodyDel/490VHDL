@@ -134,7 +134,8 @@ end component UART_TX;
   signal BlueInputINT : integer := 0;
   signal BlueGuessINT : integer:=0;
   signal activeFlag:integer:=0;  
-  signal change :std_logic; 
+  signal change :std_logic;
+  signal message:std_logic; 
 begin
 
   UART_TX_INST : uart_tx
@@ -178,7 +179,7 @@ process(initFlag,highFlag,lowFlag,winFlag,w_TX_DONE,r_TX_DV,r_RX_SERIAL)
      begin
      
         -- Tell the UART to send a command.
-
+        message<=change;
        -- w_TX_DONE<='1';
        if(rising_edge(r_CLOCK)) then
         Case w_TX_DONE  is 
@@ -225,7 +226,7 @@ process(initFlag,highFlag,lowFlag,winFlag,w_TX_DONE,r_TX_DV,r_RX_SERIAL)
              if(highFlag='0')then
                 if(HIGHMSG_Index>=9)then                                 
                  highFlag<='0';
-                 if(change = '1' ) then
+                 if(message = '1' ) then
                     if(BlueGuessINT>BlueInputINT) then
                         HIGHMSG_Index<=0;
                         highFlag<='1';
@@ -236,11 +237,13 @@ process(initFlag,highFlag,lowFlag,winFlag,w_TX_DONE,r_TX_DV,r_RX_SERIAL)
                  HIGHMSG_Index<=HIGHMSG_Index+1;
                  highFlag<='1';
                 end if; 
+                else
+                message<='0';
                 end if;                  
              if(lowFlag='0')then
                    if(LOWMSG_Index>=8)then                                 
                     lowFlag<='0';
-                 if(change = '1' ) then
+                 if(message = '1' ) then
                        if(BlueGuessINT<BlueInputINT) then
                            LOWMSG_Index<=0;
                            lowFlag<='1';
@@ -251,11 +254,13 @@ process(initFlag,highFlag,lowFlag,winFlag,w_TX_DONE,r_TX_DV,r_RX_SERIAL)
                     LOWMSG_Index<=LOWMSG_Index+1;
                     lowFlag<='1';
                    end if;
+                else
+                   message<='0';                   
                   end if;
              if(winFlag='0')then
-                      if(WINMSG_Index>=9)then                                 
+                 if(WINMSG_Index>=9)then                                 
                        winFlag<='0';
-                 if(change = '1' ) then
+                 if(message = '1' ) then
                           if(BlueGuessINT=BlueInputINT) then
                               WINMSG_Index<=0;
                               winFlag<='1';
@@ -266,7 +271,8 @@ process(initFlag,highFlag,lowFlag,winFlag,w_TX_DONE,r_TX_DV,r_RX_SERIAL)
                        WINMSG_Index<=WINMSG_Index+1;
                        winFlag<='1';
                       end if;                               
-            
+                else
+                      message<='0';            
             end if;                        
          
          
@@ -285,7 +291,7 @@ begin
             
             if(guessFlag='0' and inputFlag='0') then
             
-             if (BlueGuess /= Mbuff)then
+             
              
              BlueGuess(31 downto 24)<=Mbuff(31 downto 24);
              BlueGuess(23 downto 16)<=Mbuff(23 downto 16);
@@ -320,9 +326,6 @@ begin
              BlueGuessINT<=GINT;
              change <= '1';
              
-             else
-             change <='0' after 1 ps ;
-             end if;
              
 --            BlueGuess(31 downto 24)<=Mbuff(31 downto 24);
 --            BlueGuess(23 downto 16)<=Mbuff(23 downto 16);
